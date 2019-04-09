@@ -1,0 +1,50 @@
+{
+  "name": "homebridge-onstar",
+  "version": "0.1.0",
+  "description": "Unofficial OnStar plugin for Homebridge",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samrum/homebridge-onstar.git"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "onstar",
+    "chevrolet",
+    "chevy",
+    "gm"
+  ],
+  "author": "Ruben Medina <dev@rubenmedina.com> (https://rubenmedina.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samrum/homebridge-onstar/issues"
+  },
+  "engines": {
+    "node": ">=11.0.0",
+    "homebridge": ">=0.4.0"
+  },
+  "homepage": "https://github.com/samrum/homebridge-onstar#readme",
+  "dependencies": {
+    "onstarjs": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "coveralls": "^3.0.3",
+    "jest": "^24.7.1",
+    "prettier": "^1.16.4",
+    "rollup": "^1.9.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "ts-jest": "^24.0.2",
+    "ts-mockito": "^2.3.1",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.2"
+  }
+}
