@@ -4,7 +4,8 @@ Only exposes a method to remote start (aka precondition) a vehicle for now. Does
 
 **Use at your own risk. This is an unofficial plugin.**
 
-Example config.json:
+## Example config.json:
+Use a random version 4 uuid as a deviceId.
 
     {
       "accessories": [
