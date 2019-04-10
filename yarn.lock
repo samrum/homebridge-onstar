@@ -2717,10 +2717,10 @@ once@^1.3.0, once@^1.3.1, once@^1.4.0:
   dependencies:
     wrappy "1"
 
-onstarjs@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/onstarjs/-/onstarjs-1.0.0.tgz#b331d93a695563ed141e3df08b941ccc20fa397b"
-  integrity sha512-IpHIwulsRN2u0rWdGoA3rtxaNm1xMD3e/pC+tV1JJ6TgaEiT6h/GJF/HN28h+25knNMbxHzCJMcmnDu5ORkVqA==
+onstarjs@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/onstarjs/-/onstarjs-1.1.0.tgz#a621c69f0b63013267bb9885a760a298d88be666"
+  integrity sha512-5vopzc62IdGO4ocykWNL2nbm/bZD1G4XI3XZdfNIw/k4/Qi/t7SvHBopkPyY+MMqPdcLyc8ueIu/ea2uRVG8mA==
   dependencies:
     axios "^0.18.0"
     jsonwebtoken "^8.5.1"

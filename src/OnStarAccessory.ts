@@ -1,14 +1,6 @@
 import OnStar from "onstarjs";
 
-export default function(homebridge: any) {
-  homebridge.registerAccessory(
-    "homebridge-onstar",
-    "OnStar",
-    OnStarAccessory.bind(homebridge.hap.Service, homebridge.hap.Characteristic),
-  );
-}
-
-export class OnStarAccessory {
+class OnStarAccessory {
   private services: any[] = [];
   private onStar: OnStar;
 
@@ -72,3 +64,5 @@ export class OnStarAccessory {
     return climateService;
   }
 }
+
+export default OnStarAccessory;

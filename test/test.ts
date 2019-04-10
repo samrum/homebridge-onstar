@@ -1,6 +1,5 @@
 import { mock, when, instance } from "ts-mockito";
-import { OnStarAccessory } from "./../src/main";
-// @ts-ignore
+import OnStarAccessory from "./../src/OnStarAccessory";
 import OnStar from "onstarjs";
 
 const config = {
@@ -50,24 +49,6 @@ describe("OnStarAccessory", () => {
       (error: string | null, success: boolean) => {
         expect(error).toBeNull();
         expect(success).toBeFalsy();
-      },
-    );
-  });
-
-  test("setClimateOn", async () => {
-    await onStarAccessory.setClimateOn(
-      false,
-      (error: string | null, success: boolean | null) => {
-        expect(error).toBeNull();
-        expect(success).toBeNull();
-      },
-    );
-
-    await onStarAccessory.setClimateOn(
-      true,
-      (error: string | null, success: boolean | null) => {
-        expect(error).toBeNull();
-        expect(success).toBeNull();
       },
     );
   });
