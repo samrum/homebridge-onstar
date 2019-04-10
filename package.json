@@ -1,11 +1,8 @@
 {
   "name": "homebridge-onstar",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Unofficial OnStar plugin for Homebridge",
   "main": "dist/index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
