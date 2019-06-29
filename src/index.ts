@@ -14,9 +14,8 @@ class OnStarAccessory {
   private commandDelegator: CommandDelegator;
 
   constructor(private log: Function, private config: any) {
-    this.services.push(this.createClimateService());
-
     this.commandDelegator = new CommandDelegator(config, log);
+    this.services.push(this.createClimateService());
   }
 
   getServices() {
