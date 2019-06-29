@@ -4,11 +4,14 @@
   "description": "Unofficial OnStar plugin for Homebridge",
   "main": "dist/index.js",
   "types": "dist/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "test": "jest",
-    "functional": "ts-node test/functional.ts"
+    "functional": "ts-node test/functional.ts",
+    "prepublish": "yarn run build"
   },
   "repository": {
     "type": "git",
