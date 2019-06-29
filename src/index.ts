@@ -27,8 +27,11 @@ class OnStarAccessory {
 
     climateService
       .getCharacteristic(Characteristic.On)
-      .on("get", this.commandDelegator.getClimateOn.bind(this))
-      .on("set", this.commandDelegator.setClimateOn.bind(this));
+      .on("get", this.commandDelegator.getClimateOn.bind(this.commandDelegator))
+      .on(
+        "set",
+        this.commandDelegator.setClimateOn.bind(this.commandDelegator),
+      );
 
     return climateService;
   }
