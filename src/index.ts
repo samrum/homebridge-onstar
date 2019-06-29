@@ -1,4 +1,4 @@
-import OnStar from "onstarjs";
+import CommandDelegator from "./CommandDelegator";
 
 let Service: any, Characteristic: any;
 
@@ -11,50 +11,16 @@ export default function(homebridge: any) {
 
 class OnStarAccessory {
   private services: any[] = [];
-  private onStar: OnStar;
+  private commandDelegator: CommandDelegator;
 
   constructor(private log: Function, private config: any) {
     this.services.push(this.createClimateService());
 
-    this.onStar = OnStar.create(config);
-  }
-
-  setOnStar(onStar: OnStar) {
-    this.onStar = onStar;
+    this.commandDelegator = new CommandDelegator(config, log);
   }
 
   getServices() {
     return this.services;
-  }
-
-  async getClimateOn(reply: Function) {
-    const climateState = false;
-
-    this.log("getClimateOn: Climate State: ", climateState ? "on" : "off");
-
-    reply(null, climateState);
-  }
-
-  async setClimateOn(on: boolean, reply: Function) {
-    this.log("setClimateOn: Turning on", on);
-
-    try {
-      this.log("setClimateOn: Requesting Remote Start");
-      const response = await this.onStar.remoteStart();
-      this.log("setClimateOn: Remote Start Finished", response.data);
-
-      reply();
-    } catch (e) {
-      if (e.response) {
-        this.log(`Error: ${e.response.status} - ${e.response.statusText}`);
-      } else if (e.request) {
-        this.log("Error: API returned no response");
-      } else {
-        this.log("Error:", e.message);
-      }
-
-      reply("Failed to start due to error");
-    }
   }
 
   private createClimateService() {
@@ -62,8 +28,8 @@ class OnStarAccessory {
 
     climateService
       .getCharacteristic(Characteristic.On)
-      .on("get", this.getClimateOn.bind(this))
-      .on("set", this.setClimateOn.bind(this));
+      .on("get", this.commandDelegator.getClimateOn.bind(this))
+      .on("set", this.commandDelegator.setClimateOn.bind(this));
 
     return climateService;
   }
