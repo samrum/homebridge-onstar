@@ -40,8 +40,8 @@ class OnStarAccessory {
 
     try {
       this.log("setClimateOn: Requesting Remote Start");
-      const response = await this.onStar.remoteStart();
-      this.log("setClimateOn: Remote Start Finished", response.data);
+      const result = await this.onStar.start();
+      this.log("setClimateOn: Remote Start Finished", result.response.data);
 
       reply();
     } catch (e) {

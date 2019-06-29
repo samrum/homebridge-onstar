@@ -1,6 +1,6 @@
 {
   "name": "homebridge-onstar",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "description": "Unofficial OnStar plugin for Homebridge",
   "main": "dist/index.js",
   "types": "dist/src/index.d.ts",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/samrum/homebridge-onstar#readme",
   "dependencies": {
-    "onstarjs": "^1.1.0"
+    "onstarjs": "^2.0.1"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
