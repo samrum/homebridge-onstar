@@ -1,10 +1,13 @@
 # homebridge-onstar
 
+[![npm version](https://badge.fury.io/js/homebridge-onstar.svg)](https://badge.fury.io/js/homebridge-onstar)
+
 Only exposes a method to remote start (aka precondition) a vehicle for now. Doesn't handle any failure responses from OnStar after the initial request is made.
 
 **Use at your own risk. This is an unofficial plugin.**
 
 ## Example config.json:
+
 Use a random version 4 uuid as a deviceId.
 
     {
@@ -22,5 +25,10 @@ Use a random version 4 uuid as a deviceId.
     }
 
 To trigger a remote start using the above config, the following Siri commands would work:
-* "Start the Volty"
-* "Turn on the Volty"
+
+- "Start the Volty"
+- "Turn on the Volty"
+
+# Credits
+
+Uses [OnStarJS](https://github.com/samrum/OnStarJS) which was made possible by [mikenemat](https://github.com/mikenemat/)'s work in [gm-onstar-probe](https://github.com/mikenemat/gm-onstar-probe).
