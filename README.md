@@ -1,5 +1,7 @@
 # homebridge-onstar
 
+[![Build Status](https://travis-ci.org/samrum/homebridge-onstar.svg?branch=master)](https://travis-ci.org/samrum/homebridge-onstar)
+[![Coverage Status](https://coveralls.io/repos/github/samrum/homebridge-onstar/badge.svg)](https://coveralls.io/github/samrum/homebridge-onstar)
 [![npm version](https://badge.fury.io/js/homebridge-onstar.svg)](https://badge.fury.io/js/homebridge-onstar)
 
 Only exposes a method to remote start (aka precondition) a vehicle for now. Doesn't handle any failure responses from OnStar after the initial request is made.
