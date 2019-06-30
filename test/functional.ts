@@ -1,4 +1,4 @@
-import config from "../testCredentials.json";
+import config from "../functionalConfig.json";
 import CommandDelegator from "../src/CommandDelegator";
 
 const commandDelegator = new CommandDelegator(config, console.log);

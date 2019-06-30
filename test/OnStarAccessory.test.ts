@@ -1,17 +1,10 @@
 import { mocked } from "ts-jest/utils";
 import { EventEmitter } from "events";
 
+import testConfig from "./testConfig.json";
 import CommandDelegator from "../src/CommandDelegator";
 import OnStarAccessory from "../src/OnStarAccessory";
 jest.mock("../src/CommandDelegator");
-
-const config = {
-  deviceId: "742249ce-18e0-4c82-8bb2-9975367a7631",
-  vin: "1G2ZF58B774109863",
-  username: "foo@bar.com",
-  password: "p@ssw0rd",
-  onStarPin: "1234",
-};
 
 let onStarAccessory: OnStarAccessory;
 
@@ -35,7 +28,7 @@ describe("OnStarAccessory", () => {
       HapService,
       HapCharacteristic,
       () => {},
-      config,
+      testConfig,
     );
   });
 
@@ -44,9 +37,11 @@ describe("OnStarAccessory", () => {
   });
 
   test("climateServiceGet", done => {
+    const errorMessage = "Climate Get Error";
+
     mocked(CommandDelegator.prototype.getClimateOn).mockImplementationOnce(
       async (reply: Function) => {
-        reply("Climate Get Error", true);
+        reply(errorMessage, true);
       },
     );
 
@@ -54,16 +49,18 @@ describe("OnStarAccessory", () => {
       .getServices()[0]
       .getCharacteristic()
       .emit("get", (error: string, newValue: boolean) => {
-        expect(error).toEqual("Climate Get Error");
+        expect(error).toEqual(errorMessage);
         expect(newValue).toBeTruthy();
         done();
       });
   });
 
   test("climateServiceSet", done => {
+    const errorMessage = "Climate Set Error";
+
     mocked(CommandDelegator.prototype.setClimateOn).mockImplementationOnce(
       async (on: boolean, reply: Function) => {
-        reply("Climate Set Error");
+        reply(errorMessage);
       },
     );
 
@@ -71,7 +68,7 @@ describe("OnStarAccessory", () => {
       .getServices()[0]
       .getCharacteristic()
       .emit("set", true, (error: string) => {
-        expect(error).toEqual("Climate Set Error");
+        expect(error).toEqual(errorMessage);
         done();
       });
   });

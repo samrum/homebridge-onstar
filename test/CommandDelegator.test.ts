@@ -1,17 +1,10 @@
-import { mock, instance, when, anyString, anything } from "ts-mockito";
-
+import { mock, instance, when } from "ts-mockito";
 import { mocked } from "ts-jest/utils";
+
+import testConfig from "./testConfig.json";
 import OnStar from "onstarjs";
 import CommandDelegator from "../src/CommandDelegator";
 jest.mock("onstarjs");
-
-const config = {
-  deviceId: "742249ce-18e0-4c82-8bb2-9975367a7631",
-  vin: "1G2ZF58B774109863",
-  username: "foo@bar.com",
-  password: "p@ssw0rd",
-  onStarPin: "1234",
-};
 
 let commandDelegator: CommandDelegator;
 let onStarMock = mock(OnStar);
@@ -20,7 +13,7 @@ let onStarInstance = instance(onStarMock);
 describe("OnStarAccessory", () => {
   beforeEach(() => {
     mocked(OnStar.create).mockReturnValue(onStarInstance);
-    commandDelegator = new CommandDelegator(config, () => {});
+    commandDelegator = new CommandDelegator(testConfig, () => {});
   });
 
   test("getClimateOn", done => {
@@ -48,10 +41,12 @@ describe("OnStarAccessory", () => {
   });
 
   test("setClimateOnError", done => {
-    when(onStarMock.start()).thenThrow(new Error("Start Failure"));
+    const errorMessage = "Start Failure";
+
+    when(onStarMock.start()).thenThrow(new Error(errorMessage));
 
     commandDelegator.setClimateOn(true, (error: string) => {
-      expect(error).toEqual("Error: Start Failure");
+      expect(error).toEqual(`Error: ${errorMessage}`);
       done();
     });
   });
