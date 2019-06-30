@@ -10,6 +10,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
+    "test": "jest",
+    "coverage": "jest --coverage",
     "functional": "ts-node test/functional.ts",
     "prepublish": "yarn run build"
   },

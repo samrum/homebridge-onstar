@@ -4,7 +4,11 @@ import CommandDelegator from "../src/CommandDelegator";
 const commandDelegator = new CommandDelegator(config, console.log);
 
 (async () => {
-  await commandDelegator.flashHeadlights((result: string) => {
-    console.log(result);
+  await commandDelegator.setClimateOn(true, (error: string) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Success!");
+    }
   });
 })();
