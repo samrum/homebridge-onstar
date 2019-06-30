@@ -13,7 +13,7 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "functional": "ts-node test/functional.ts",
-    "prepublish": "yarn run build"
+    "prepublishOnly": "yarn run test && yarn run build"
   },
   "repository": {
     "type": "git",
@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/samrum/homebridge-onstar#readme",
   "dependencies": {
-    "onstarjs": "^2.0.1"
+    "onstarjs": "^2.0.3"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
