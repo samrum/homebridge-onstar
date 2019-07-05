@@ -10,14 +10,14 @@ Only exposes a method to remote start (aka precondition) a vehicle for now. Does
 
 ## Example config.json:
 
-Use a random version 4 uuid as a deviceId.
+Use a random version 4 uuid (there are online generators) as a deviceId.
 
     {
       "accessories": [
         {
           "accessory": "OnStar",
           "name": "Volty",
-          "deviceId": "742249ce-18e0-4c82-8bb2-9975367a7631",
+          "deviceId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
           "vin": "1G2ZF58B774109863",
           "username": "dev@rubenmedina.com",
           "password": "p@ssw0rd",
