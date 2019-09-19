@@ -26,7 +26,10 @@ class CommandDelegator {
 
       reply(null);
     } catch (e) {
-      reply(`Error: ${e.message}`);
+      const errorMessage = `setClimateOn: Error: ${e.message}`;
+
+      this.log(errorMessage);
+      reply(errorMessage);
     }
   }
 }
