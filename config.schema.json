@@ -1,0 +1,72 @@
+{
+  "pluginAlias": "OnStar",
+  "pluginType": "accessory",
+  "footerDisplay": "For additional info please check the [homebridge-onstar](https://github.com/samrum/homebridge-onstar/) repo.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true,
+        "default": "Car",
+        "description": "The identifier to use for all commands."
+      },
+      "deviceId": {
+        "title": "Device ID",
+        "type": "string",
+        "required": true,
+        "default": "",
+        "description": "A random version 4 UUID. Use an online generator to get this."
+      },
+      "vin": {
+        "title": "Vehicle VIN",
+        "type": "string",
+        "required": true,
+        "default": ""
+      },
+      "username": {
+        "title": "OnStar Username",
+        "type": "string",
+        "required": true,
+        "default": ""
+      },
+      "password": {
+        "title": "OnStar Password",
+        "type": "string",
+        "required": true,
+        "default": ""
+      },
+      "onStarPin": {
+        "title": "OnStar Pin",
+        "type": "string",
+        "required": true,
+        "default": ""
+      },
+      "enableAlert": {
+        "title": "Enable Alert Switch",
+        "type": "boolean",
+        "default": false,
+        "description": "Enables a switch for triggering the 'Alert' action"
+      },
+      "enableCharger": {
+        "title": "Enable Charger Switch",
+        "type": "boolean",
+        "default": false,
+        "description": "Enables a switch for triggering the 'Charge Override -- Immediate' action"
+      },
+      "enableDoors": {
+        "title": "Enable Doors Lock",
+        "type": "boolean",
+        "default": false,
+        "description": "Enables a lock for triggering the 'Door Lock/Unlock' action. Note that the lock component will always reset to a Locked state. Siri commands to lock doors will work even if the lock component is in the locked state."
+      },
+      "doorsDefaultToUnlocked": {
+        "title": "Doors Default to Unlocked",
+        "type": "boolean",
+        "default": false,
+        "description": "Make the Doors Lock default to an Unlocked state instead of Locked."
+      }
+    }
+  }
+}

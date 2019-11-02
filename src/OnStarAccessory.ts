@@ -1,4 +1,6 @@
+import OnStar from "onstarjs";
 import CommandDelegator from "./CommandDelegator";
+import { OnStarJsMethod, OnStarAccessoryConfig } from "./types";
 
 class OnStarAccessory {
   private services: any[] = [];
@@ -8,28 +10,91 @@ class OnStarAccessory {
     private hapService: any,
     private hapCharacteristic: any,
     private log: Function,
-    private config: any,
+    private config: OnStarAccessoryConfig,
   ) {
-    this.commandDelegator = new CommandDelegator(config, log);
-    this.services.push(this.createClimateService());
+    this.commandDelegator = new CommandDelegator(
+      OnStar.create({
+        deviceId: this.config.deviceId,
+        vin: this.config.vin,
+        username: this.config.username,
+        password: this.config.password,
+        onStarPin: this.config.onStarPin,
+        checkRequestStatus: false,
+      }),
+      this.log,
+      this.hapCharacteristic,
+      this.config.doorsDefaultToUnlocked,
+    );
+
+    const name = this.config.name;
+
+    this.services.push(this.getSwitchService(`${name} Climate`, "start"));
+
+    if (this.config.enableAlert) {
+      this.services.push(this.getSwitchService(`${name} Alert`, "alert"));
+    }
+
+    if (this.config.enableCharger) {
+      this.services.push(
+        this.getSwitchService(`${name} Charger`, "chargeOverride"),
+      );
+    }
+
+    if (this.config.enableDoors) {
+      this.services.push(this.getDoorLockService(`${name} Doors`));
+    }
   }
 
   getServices() {
     return this.services;
   }
 
-  private createClimateService() {
-    const climateService = new this.hapService.Switch(this.config.name);
+  private getSwitchService(name: string, method: OnStarJsMethod) {
+    const service = new this.hapService.Switch(name, method);
 
-    climateService
+    service
       .getCharacteristic(this.hapCharacteristic.On)
-      .on("get", this.commandDelegator.getClimateOn.bind(this.commandDelegator))
+      .on(
+        "get",
+        this.commandDelegator.getFalse.bind(this.commandDelegator, method),
+      )
       .on(
         "set",
-        this.commandDelegator.setClimateOn.bind(this.commandDelegator),
+        this.commandDelegator.setSwitch.bind(this.commandDelegator, method),
       );
 
-    return climateService;
+    return service;
+  }
+
+  private getDoorLockService(name: string) {
+    const service = new this.hapService.LockMechanism(name, "doors");
+
+    service
+      .getCharacteristic(this.hapCharacteristic.LockCurrentState)
+      .on(
+        "get",
+        this.commandDelegator.getDoorLockCurrentState.bind(
+          this.commandDelegator,
+        ),
+      );
+
+    service
+      .getCharacteristic(this.hapCharacteristic.LockTargetState)
+      .on(
+        "get",
+        this.commandDelegator.getDoorLockTargetState.bind(
+          this.commandDelegator,
+        ),
+      )
+      .on(
+        "set",
+        this.commandDelegator.setDoorLockTargetState.bind(
+          this.commandDelegator,
+          service,
+        ),
+      );
+
+    return service;
   }
 }
 

@@ -1,75 +1,53 @@
-import { mocked } from "ts-jest/utils";
-import { EventEmitter } from "events";
-
-import testConfig from "./testConfig.json";
-import CommandDelegator from "../src/CommandDelegator";
+import { HapCharacteristic, HapService } from "./hapMocks";
 import OnStarAccessory from "../src/OnStarAccessory";
+import { OnStarAccessoryConfig } from "../src/types";
 jest.mock("../src/CommandDelegator");
+
+const TestAccessoryConfig: OnStarAccessoryConfig = {
+  deviceId: "742249ce-18e0-4c82-8bb2-9975367a7631",
+  vin: "1G2ZF58B774109863",
+  username: "foo@bar.com",
+  password: "p@ssw0rd",
+  onStarPin: "1234",
+  name: "Car",
+};
 
 let onStarAccessory: OnStarAccessory;
 
+function createOnStarAccessory(config: OnStarAccessoryConfig): OnStarAccessory {
+  return new OnStarAccessory(HapService, HapCharacteristic, () => {}, config);
+}
+
 describe("OnStarAccessory", () => {
-  beforeEach(() => {
-    const mockCharacteristic = new EventEmitter();
-
-    const HapService = {
-      Switch: function(name: string) {
-        return {
-          getCharacteristic: function(hapCharacteristic: any) {
-            return mockCharacteristic;
-          },
-        };
-      },
-    };
-
-    const HapCharacteristic = {};
-
-    onStarAccessory = new OnStarAccessory(
-      HapService,
-      HapCharacteristic,
-      () => {},
-      testConfig,
-    );
-  });
-
-  test("getServices", () => {
+  test("Default Config", () => {
+    onStarAccessory = createOnStarAccessory(TestAccessoryConfig);
     expect(onStarAccessory.getServices().length).toEqual(1);
   });
 
-  test("climateServiceGet", done => {
-    const errorMessage = "Climate Get Error";
+  test("Alert Enabled", () => {
+    onStarAccessory = createOnStarAccessory({
+      ...TestAccessoryConfig,
+      enableAlert: true,
+    });
 
-    mocked(CommandDelegator.prototype.getClimateOn).mockImplementationOnce(
-      async (reply: Function) => {
-        reply(errorMessage, true);
-      },
-    );
-
-    onStarAccessory
-      .getServices()[0]
-      .getCharacteristic()
-      .emit("get", (error: string, newValue: boolean) => {
-        expect(error).toEqual(errorMessage);
-        expect(newValue).toBeTruthy();
-        done();
-      });
+    expect(onStarAccessory.getServices().length).toEqual(2);
   });
 
-  test("climateServiceSet", done => {
-    const errorMessage = "Climate Set Error";
+  test("Charger Enabled", () => {
+    onStarAccessory = createOnStarAccessory({
+      ...TestAccessoryConfig,
+      enableCharger: true,
+    });
 
-    mocked(CommandDelegator.prototype.setClimateOn).mockImplementationOnce(
-      async (on: boolean, reply: Function) => {
-        reply(errorMessage);
-      },
-    );
+    expect(onStarAccessory.getServices().length).toEqual(2);
+  });
 
-    onStarAccessory
-      .getServices()[0]
-      .getCharacteristic()
-      .emit("set", true, (error: string) => {
-        expect(error).toEqual(errorMessage);
-        done();
-      });
+  test("Doors Enabled", () => {
+    onStarAccessory = createOnStarAccessory({
+      ...TestAccessoryConfig,
+      enableDoors: true,
+    });
+
+    expect(onStarAccessory.getServices().length).toEqual(2);
   });
 });
