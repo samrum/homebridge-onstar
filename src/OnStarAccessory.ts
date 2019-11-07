@@ -23,7 +23,7 @@ class OnStarAccessory {
       }),
       this.log,
       this.hapCharacteristic,
-      this.config.doorsDefaultToUnlocked,
+      this.config.doorsDefaultToUnlocked || false,
     );
 
     const name = this.config.name;

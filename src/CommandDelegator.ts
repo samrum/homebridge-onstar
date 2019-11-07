@@ -7,7 +7,7 @@ class CommandDelegator {
     private onStar: OnStar,
     private log: Function,
     private hapCharacteristic: any,
-    private doorsDefaultToUnlocked: boolean = false,
+    private doorsDefaultToUnlocked: boolean,
   ) {}
 
   async getFalse(_: OnStarJsMethod, reply: Function) {
