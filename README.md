@@ -5,13 +5,13 @@
 
 Homebridge support for OnStar!
 
-A climate control switch is available by default. Charge Override, Alert, and Door Lock/Unlock functionality can be enabled via configuration options as seen in the example config below:
+A climate control switch is available by default. Charge Override, Alert, and Door Lock/Unlock functionality can be enabled via configuration options as seen in the example config below.
 
 **Use at your own risk. This is an unofficial plugin.**
 
 ## Example config.json:
 
-Use a random version 4 uuid (there are online generators) as a deviceId.
+Use a random version 4 uuid as a deviceId. There are online generators you can use to generate one.
 
     {
       "accessories": [
@@ -36,8 +36,8 @@ For the above example config, the following Siri commands would be available.
 - _"Turn on the Car climate"_ - Precondition/remote start the Vehicle
 - _"Turn on the Car charger"_ - Set charge mode to immediate (For EV/PHEV Vehicles)
 - _"Turn on the Car alert"_ - Triggers a horn/lights alert 
-- _"Unlock the Car"_ - Unlocks the driver door for the Vehicle
-- _"Turn on the Car"_ - Turns on all available switches (Careful!)
+- _"Unlock the Car"_ - Sends an unlock command to the Vehicle
+- _"Turn on the Car"_ - Turns on all available switches (Be careful!)
 
 Off/Lock variants are also available. However, the charger switch doesn't support off at the moment.
 
