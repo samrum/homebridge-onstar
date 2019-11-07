@@ -115,7 +115,7 @@ describe("CommandDelegator", () => {
     );
   });
 
-  test("setSwitch", done => {
+  test("setSwitch - Start On", done => {
     when(onStarMock.start()).thenResolve({
       status: "success",
       response: {
@@ -127,6 +127,77 @@ describe("CommandDelegator", () => {
 
     commandDelegator.setSwitch("start", true, (error: string) => {
       expect(error).toBeNull();
+      done();
+    });
+  });
+
+  test("setSwitch - Start Off", done => {
+    when(onStarMock.cancelStart()).thenResolve({
+      status: "success",
+      response: {
+        data: {
+          status: "In Progress",
+        },
+      },
+    });
+
+    commandDelegator.setSwitch("start", false, (error: string) => {
+      expect(error).toBeNull();
+      done();
+    });
+  });
+
+  test("setSwitch - Alert On", done => {
+    when(onStarMock.alert()).thenResolve({
+      status: "success",
+      response: {
+        data: {
+          status: "In Progress",
+        },
+      },
+    });
+
+    commandDelegator.setSwitch("alert", true, (error: string) => {
+      expect(error).toBeNull();
+      done();
+    });
+  });
+
+  test("setSwitch - Alert Off", done => {
+    when(onStarMock.cancelAlert()).thenResolve({
+      status: "success",
+      response: {
+        data: {
+          status: "In Progress",
+        },
+      },
+    });
+
+    commandDelegator.setSwitch("alert", false, (error: string) => {
+      expect(error).toBeNull();
+      done();
+    });
+  });
+
+  test("setSwitch - Charger On", done => {
+    when(onStarMock.chargeOverride()).thenResolve({
+      status: "success",
+      response: {
+        data: {
+          status: "In Progress",
+        },
+      },
+    });
+
+    commandDelegator.setSwitch("chargeOverride", true, (error: string) => {
+      expect(error).toBeNull();
+      done();
+    });
+  });
+
+  test("setSwitch - Charger Off", done => {
+    commandDelegator.setSwitch("chargeOverride", false, (error: string) => {
+      expect(error).toEqual("chargeOverride: Off Method Not Available");
       done();
     });
   });
