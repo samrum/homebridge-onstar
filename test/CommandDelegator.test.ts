@@ -115,6 +115,22 @@ describe("CommandDelegator", () => {
     );
   });
 
+  test("setDoorLockTargetState - Error", done => {
+    when(onStarMock.lockDoor()).thenThrow(
+      new Error("setDoorLockTargetState Failure"),
+    );
+
+    commandDelegator.setDoorLockTargetState(
+      HapService.LockMechanism("lock"),
+      HapCharacteristic.LockTargetState.SECURED,
+      (error: string) => {
+        expect(error).toBeDefined;
+        expect(error).not.toBeNull;
+        done();
+      },
+    );
+  });
+
   test("setSwitch - Start On", done => {
     when(onStarMock.start()).thenResolve({
       status: "success",
