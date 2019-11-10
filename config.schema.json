@@ -9,8 +9,7 @@
         "title": "Name",
         "type": "string",
         "required": true,
-        "default": "Car",
-        "description": "The identifier to use for all commands."
+        "default": "Car"
       },
       "deviceId": {
         "title": "Device ID",
@@ -20,7 +19,7 @@
         "description": "A random version 4 UUID. Use an online generator to get this."
       },
       "vin": {
-        "title": "Vehicle VIN",
+        "title": "VIN",
         "type": "string",
         "required": true,
         "default": ""
@@ -46,26 +45,23 @@
       "enableAlert": {
         "title": "Enable Alert Switch",
         "type": "boolean",
-        "default": false,
-        "description": "Enables a switch for triggering the 'Alert' action"
+        "default": false
       },
       "enableCharger": {
         "title": "Enable Charger Switch",
         "type": "boolean",
-        "default": false,
-        "description": "Enables a switch for triggering the 'Charge Override -- Immediate' action"
+        "default": false
       },
       "enableDoors": {
         "title": "Enable Doors Lock",
         "type": "boolean",
         "default": false,
-        "description": "Enables a lock for triggering the 'Door Lock/Unlock' action. Note that the lock component will always reset to a Locked state. Siri commands to lock doors will work even if the lock component is in the locked state."
+        "description": "By default, the lock will always reset to a Locked state."
       },
       "doorsDefaultToUnlocked": {
-        "title": "Doors Default to Unlocked",
+        "title": "Default Doors to Unlocked State",
         "type": "boolean",
-        "default": false,
-        "description": "Make the Doors Lock default to an Unlocked state instead of Locked."
+        "default": false
       }
     }
   }

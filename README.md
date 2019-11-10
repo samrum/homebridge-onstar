@@ -1,7 +1,8 @@
 # homebridge-onstar (OnStar Accessory)
 
-[![Build Status](https://travis-ci.org/samrum/homebridge-onstar.svg?branch=master)](https://travis-ci.org/samrum/homebridge-onstar)
 [![npm version](https://badge.fury.io/js/homebridge-onstar.svg)](https://badge.fury.io/js/homebridge-onstar)
+[![Build Status](https://travis-ci.org/samrum/homebridge-onstar.svg?branch=master)](https://travis-ci.org/samrum/homebridge-onstar)
+[![Coverage Status](https://coveralls.io/repos/github/samrum/homebridge-onstar/badge.svg?branch=master)](https://coveralls.io/github/samrum/homebridge-onstar?branch=master)
 
 Homebridge support for OnStar!
 
@@ -34,12 +35,13 @@ Use a random version 4 uuid as a deviceId. There are online generators you can u
 ## Siri Commands
 For the above example config, the following Siri commands would be available. 
 - _"Turn on the Car climate"_ - Precondition/remote start the Vehicle
-- _"Turn on the Car charger"_ - Set charge mode to immediate (For EV/PHEV Vehicles)
-- _"Turn on the Car alert"_ - Triggers a horn/lights alert 
-- _"Unlock the Car"_ - Sends an unlock command to the Vehicle
-- _"Turn on the Car"_ - Turns on all available switches (Be careful!)
+- _"Turn on the Car charger"_ - Set charge mode to immediate (For EV/PHEV)
+- _"Turn on the Car alert"_ - Trigger a horn/lights alert 
+- _"Unlock the Car"_ - Send an unlock command to the Vehicle
+- _"Turn on the Car"_ - Turns on all available switches 
 
-Off/Lock variants are also available. However, the charger switch doesn't support off at the moment.
+Using Off/Lock are also possible via Siri even if the switch is already off/locked in the UI.
+Note that turning off the charger is not supported.
 
 # Important Notes
 - The Doors Lock component will always reset to a Locked state due to the fact that querying for the current state of the lock via the API is not reponsive enough to do quickly or keep in sync very easily. Siri commands to lock doors will work even if the lock component is in the locked state.
@@ -49,6 +51,6 @@ Off/Lock variants are also available. However, the charger switch doesn't suppor
 - This plugin may stop working every few months when secret keys are rotated by MyChevrolet/OnStar. Feel free to open an issue when this happens.
 
 # Credits
-[OnStarJS](https://github.com/samrum/OnStarJS) for providing the library to make OnStar requests. (Shoutout to [mikenemat](https://github.com/mikenemat/) and [gm-onstar-probe](https://github.com/mikenemat/gm-onstar-probe))
+[OnStarJS](https://github.com/samrum/OnStarJS) for providing the library to make OnStar requests. (Shoutout to [mikenemat](https://github.com/mikenemat/) and [gm-onstar-probe](https://github.com/mikenemat/gm-onstar-probe) for facilitating that library)
 
 [homebridge-tesla](https://github.com/nfarina/homebridge-tesla) for providing much needed help and guidance in figuring out how to set up various homebridge services.
