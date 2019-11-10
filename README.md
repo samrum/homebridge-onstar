@@ -40,7 +40,7 @@ For the above example config, the following Siri commands would be available.
 - _"Unlock the Car"_ - Send an unlock command to the Vehicle
 - _"Turn on the Car"_ - Turns on all available switches 
 
-Using Off/Lock are also possible via Siri even if the switch is already off/locked in the UI.
+Turning off switches is also possible via Siri, but not via the Home UI as the switches default to off.
 Note that turning off the charger is not supported.
 
 # Important Notes
