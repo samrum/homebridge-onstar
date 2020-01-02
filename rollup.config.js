@@ -10,7 +10,7 @@ export default {
   ],
   output: [
     { file: pkg.main, format: "cjs" },
-    { file: pkg.main, format: "esm" },
+    { file: pkg.module, format: "esm" },
   ],
   external: [
     ...Object.keys(pkg.dependencies || {}),
