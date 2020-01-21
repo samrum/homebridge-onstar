@@ -1,5 +1,5 @@
 import OnStar from "onstarjs";
-import { Result } from "onstarjs/dist/src/types";
+import { Result } from "onstarjs/dist/types";
 import { OnStarJsMethod } from "./types";
 
 class CommandDelegator {
