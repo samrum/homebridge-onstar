@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/samrum/homebridge-onstar#readme",
   "dependencies": {
-    "onstarjs": "^2.0.4"
+    "onstarjs": "^2.0.6"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
