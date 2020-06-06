@@ -51,6 +51,6 @@ Note that turning off the charger is not supported.
 - This plugin may stop working every few months when secret keys are rotated by MyChevrolet/OnStar. Feel free to open an issue when this happens.
 
 # Credits
-[OnStarJS](https://github.com/samrum/OnStarJS) for providing the library to make OnStar requests. (Shoutout to [mikenemat](https://github.com/mikenemat/) and [gm-onstar-probe](https://github.com/mikenemat/gm-onstar-probe) for facilitating that library)
+[OnStarJS](https://github.com/samrum/OnStarJS) (Shoutout to [mikenemat](https://github.com/mikenemat/) and [gm-onstar-probe](https://github.com/mikenemat/gm-onstar-probe))
 
-[homebridge-tesla](https://github.com/nfarina/homebridge-tesla) for providing much needed help and guidance in figuring out how to set up various homebridge services.
+[homebridge-tesla](https://github.com/nfarina/homebridge-tesla) for being a great reference to refer to on how to set up various homebridge services.
