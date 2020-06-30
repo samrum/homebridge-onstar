@@ -67,7 +67,7 @@ class CommandDelegator {
 
     reply(error);
 
-    await this.pause(1000);
+    await this.pause(5000);
 
     this.doorLockCurrentState = this.getDefaultLockState(
       this.hapCharacteristic.LockCurrentState,
