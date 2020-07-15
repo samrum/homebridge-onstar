@@ -96,7 +96,7 @@ class CommandDelegator {
 
       result = await this.onStar[method]();
 
-      this.log(`${method}: Finished`, result.response.data);
+      this.log(`${method}: Finished`, result.response?.data);
 
       return null;
     } catch (e) {
