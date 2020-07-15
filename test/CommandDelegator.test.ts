@@ -18,6 +18,13 @@ function createCommandDelegator(doorsDefaultToUnlocked: boolean = false) {
   );
 }
 
+const onStarJsResponseInProgress = {
+  status: "success",
+  response: {
+    data: "In Progress",
+  },
+};
+
 describe("CommandDelegator", () => {
   beforeEach(() => {
     commandDelegator = createCommandDelegator();
@@ -76,14 +83,7 @@ describe("CommandDelegator", () => {
   });
 
   test("setDoorLockTargetState - SECURED", done => {
-    when(onStarMock.lockDoor()).thenResolve({
-      status: "success",
-      response: {
-        data: {
-          status: "In Progress",
-        },
-      },
-    });
+    when(onStarMock.lockDoor()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setDoorLockTargetState(
       HapService.LockMechanism("lock"),
@@ -96,14 +96,7 @@ describe("CommandDelegator", () => {
   });
 
   test("setDoorLockTargetState - UNSECURED", done => {
-    when(onStarMock.unlockDoor()).thenResolve({
-      status: "success",
-      response: {
-        data: {
-          status: "In Progress",
-        },
-      },
-    });
+    when(onStarMock.unlockDoor()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setDoorLockTargetState(
       HapService.LockMechanism("unlock"),
@@ -132,14 +125,7 @@ describe("CommandDelegator", () => {
   });
 
   test("setSwitch - Start On", done => {
-    when(onStarMock.start()).thenResolve({
-      status: "success",
-      response: {
-        data: {
-          status: "In Progress",
-        },
-      },
-    });
+    when(onStarMock.start()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setSwitch("start", true, (error: string) => {
       expect(error).toBeNull();
@@ -148,14 +134,7 @@ describe("CommandDelegator", () => {
   });
 
   test("setSwitch - Start Off", done => {
-    when(onStarMock.cancelStart()).thenResolve({
-      status: "success",
-      response: {
-        data: {
-          status: "In Progress",
-        },
-      },
-    });
+    when(onStarMock.cancelStart()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setSwitch("start", false, (error: string) => {
       expect(error).toBeNull();
@@ -164,14 +143,7 @@ describe("CommandDelegator", () => {
   });
 
   test("setSwitch - Alert On", done => {
-    when(onStarMock.alert()).thenResolve({
-      status: "success",
-      response: {
-        data: {
-          status: "In Progress",
-        },
-      },
-    });
+    when(onStarMock.alert()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setSwitch("alert", true, (error: string) => {
       expect(error).toBeNull();
@@ -180,14 +152,7 @@ describe("CommandDelegator", () => {
   });
 
   test("setSwitch - Alert Off", done => {
-    when(onStarMock.cancelAlert()).thenResolve({
-      status: "success",
-      response: {
-        data: {
-          status: "In Progress",
-        },
-      },
-    });
+    when(onStarMock.cancelAlert()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setSwitch("alert", false, (error: string) => {
       expect(error).toBeNull();
@@ -196,14 +161,7 @@ describe("CommandDelegator", () => {
   });
 
   test("setSwitch - Charger On", done => {
-    when(onStarMock.chargeOverride()).thenResolve({
-      status: "success",
-      response: {
-        data: {
-          status: "In Progress",
-        },
-      },
-    });
+    when(onStarMock.chargeOverride()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setSwitch("chargeOverride", true, (error: string) => {
       expect(error).toBeNull();
