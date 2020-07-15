@@ -21,7 +21,7 @@ Homebridge support for OnStar!
           "vin": "11111111111111111",
           "username": "foo@bar.com",
           "password": "p@ssw0rd",
-          "onStarPin": "1234",
+          "onStarPin": "1234"
         }
       ]
     }
