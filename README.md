@@ -48,13 +48,13 @@ Siri command: "Unlock the Car"
 
     "doorsDefaultToUnlocked": true
 
-Default the doors lock switch to an unlocked state.
+Default the doors switch to an unlocked state.
 
 ### Charger Switch
 
     "enableCharger": true
 
-Enable a switch that will set the vehicle charge mode to immediate (For EV/PHEV). Turning the switch off does nothing.
+Enable a switch that will set the vehicle charge mode to immediate (for EV/PHEV). Turning the switch off does nothing.
 
 Siri command: "Turn on the Car charger"
 
@@ -62,7 +62,7 @@ Siri command: "Turn on the Car charger"
 
     "enableAlert": true
 
-Enable a switch that triggers the panic function of the car (horn + lights flashing).
+Enable a switch that triggers an alert for the vehicle (horn + lights flashing).
 
 Siri command: "Turn on the Car alert"
 
