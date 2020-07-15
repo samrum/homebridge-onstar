@@ -36,17 +36,17 @@ Siri Command: "Turn on the Car climate"
 
 ### Lock/Unlock Doors Switch
 
-    "enableDoors": true,
+    "enableDoors": true
 
 Enables locking/unlocking the vehicle doors.
 
-Since querying the current state of locks through OnStar is slow, the switch will always reset to a locked state. The doorsDefaultToUnlocked option can be used to default to an unlocked state (see below).
+Since querying the current state of locks through OnStar is slow, the switch will always reset to a locked state.
 
 Siri command: "Unlock the Car"
 
-### Door Default Lock Status
+### Default Doors Switch to Unlocked
 
-    "doorsDefaultToUnlocked": true,
+    "doorsDefaultToUnlocked": true
 
 Default the doors lock switch to an unlocked state.
 
@@ -60,7 +60,7 @@ Siri command: "Turn on the Car charger"
 
 ### Alert Switch
 
-    "enableAlert": true,
+    "enableAlert": true
 
 Enable a switch that triggers the panic function of the car (horn + lights flashing).
 
