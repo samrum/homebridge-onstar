@@ -6,13 +6,11 @@
 
 Homebridge support for OnStar!
 
-A climate control switch is available by default. Charge Override, Alert, and Door Lock/Unlock functionality can be enabled via configuration options as seen in the example config below.
-
 **Use at your own risk. This is an unofficial plugin.**
 
-## Example config.json:
+# Configuration
 
-Use a random version 4 uuid as a deviceId. There are online generators you can use to generate one.
+## Basic Config
 
     {
       "accessories": [
@@ -21,36 +19,62 @@ Use a random version 4 uuid as a deviceId. There are online generators you can u
           "name": "Car",
           "deviceId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
           "vin": "11111111111111111",
-          "username": "dev@rubenmedina.com",
+          "username": "foo@bar.com",
           "password": "p@ssw0rd",
           "onStarPin": "1234",
-          "enableCharger": true,
-          "enableAlert": true,
-          "enableDoors": true,
-          "doorsDefaultToUnlocked": false,
         }
       ]
     }
 
-## Siri Commands
-For the above example config, the following Siri commands would be available. 
-- _"Turn on the Car climate"_ - Precondition/remote start the Vehicle
-- _"Turn on the Car charger"_ - Set charge mode to immediate (For EV/PHEV)
-- _"Turn on the Car alert"_ - Trigger a horn/lights alert 
-- _"Unlock the Car"_ - Send an unlock command to the Vehicle
-- _"Turn on the Car"_ - Turns on all available switches 
+Use a random version 4 uuid as a deviceId. Generator avaiable [here](https://www.uuidgenerator.net/version4).
 
-Turning off switches is also possible via Siri, but not via the Home UI as the switches default to off.
-Note that turning off the charger is not supported.
+With this config, a climate control (remote start) switch will be available in the Home app.
 
-# Important Notes
-- The Doors Lock component will always reset to a Locked state due to the fact that querying for the current state of the lock via the API is not reponsive enough to do quickly or keep in sync very easily. Siri commands to lock doors will work even if the lock component is in the locked state.
-  - Use the _doorsDefaultToUnlocked_ option to default the lock to an Unlocked state instead
-- Request failures after the initial request are made won't be processed. The plugin will return success once requests are considered _In Progress_. 
-- Siri service names are essentially global, so the name you set in config (or in the home app itself) should be unique. If it matches app names or other Siri commands, Siri will get confused.
-- This plugin may stop working every few months when secret keys are rotated by MyChevrolet/OnStar. Feel free to open an issue when this happens.
+Siri Command: "Turn on the Car climate"
+
+## Additional Config Options
+
+### Lock/Unlock Doors Switch
+
+    "enableDoors": true,
+
+Enables locking/unlocking the vehicle doors.
+
+Since querying the current state of locks through OnStar is slow, the switch will always reset to a locked state. The doorsDefaultToUnlocked option can be used to default to an unlocked state (see below).
+
+Siri command: "Unlock the Car"
+
+### Door Default Lock Status
+
+    "doorsDefaultToUnlocked": true,
+
+Default the doors lock switch to an unlocked state.
+
+### Charger Switch
+
+    "enableCharger": true
+
+Enable a switch that will set the vehicle charge mode to immediate (For EV/PHEV). Turning the switch off does nothing.
+
+Siri command: "Turn on the Car charger"
+
+### Alert Switch
+
+    "enableAlert": true,
+
+Enable a switch that triggers the panic function of the car (horn + lights flashing).
+
+Siri command: "Turn on the Car alert"
+
+# Notes
+
+- Turning off switches is possible using Siri/Shortcuts/Scenes
+- When secret keys are rotated by MyChevrolet/OnStar, the plugin may stop working until the keys are updated.
+- OnStar request failures after the initial request are made won't be processed. homebridge-onstar will return success once requests are considered _In Progress_.
+- The name you set in the config should be unique. If it matches app names, other Siri commands, or other Home accessories, Siri may get confused.
 
 # Credits
+
 [OnStarJS](https://github.com/samrum/OnStarJS) (Shoutout to [mikenemat](https://github.com/mikenemat/) and [gm-onstar-probe](https://github.com/mikenemat/gm-onstar-probe))
 
 [homebridge-tesla](https://github.com/nfarina/homebridge-tesla) for being a great reference to refer to on how to set up various homebridge services.
