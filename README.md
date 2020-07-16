@@ -10,7 +10,7 @@ Homebridge support for OnStar!
 
 # Configuration
 
-## Basic Config
+## Basic Config (Climate)
 
     {
       "accessories": [
@@ -40,11 +40,11 @@ Siri Command: "Turn on the Car climate"
 
 Enables locking/unlocking the vehicle doors.
 
-Since querying the current state of locks through OnStar is slow, the switch will always reset to a locked state.
+Querying the current state of locks through OnStar is slow, so the switch will always reset to a locked state.
 
 Siri command: "Unlock the Car"
 
-### Default Doors Switch to Unlocked
+### Reset Doors Switch to an Unlocked State
 
     "doorsDefaultToUnlocked": true
 
@@ -68,10 +68,9 @@ Siri command: "Turn on the Car alert"
 
 # Notes
 
-- Turning off switches is possible using Siri/Shortcuts/Scenes
+- Toggling switches off is possible using Siri/Shortcuts/Scenes
 - When secret keys are rotated by MyChevrolet/OnStar, the plugin may stop working until the keys are updated.
-- OnStar request failures after the initial request are made won't be processed. homebridge-onstar will return success once requests are considered _In Progress_.
-- The name you set in the config should be unique. If it matches app names, other Siri commands, or other Home accessories, Siri may get confused.
+- homebridge-onstar will return success once requests are considered _In Progress_. As such, OnStar request failures after the initial request are made won't be handled.
 
 # Credits
 
