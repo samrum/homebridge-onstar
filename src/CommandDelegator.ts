@@ -3,12 +3,18 @@ import { Result } from "onstarjs/dist/types";
 import { OnStarJsMethod } from "./types";
 
 class CommandDelegator {
+  private doorLockCurrentState: number;
+
   constructor(
     private onStar: OnStar,
     private log: Function,
     private hapCharacteristic: any,
     private doorsDefaultToUnlocked: boolean,
-  ) {}
+  ) {
+    this.doorLockCurrentState = this.getDefaultLockState(
+      this.hapCharacteristic.LockCurrentState,
+    );
+  }
 
   async getFalse(_: OnStarJsMethod, reply: Function) {
     reply(null, false);
@@ -31,10 +37,7 @@ class CommandDelegator {
   }
 
   async getDoorLockCurrentState(reply: Function) {
-    reply(
-      null,
-      this.getDefaultLockState(this.hapCharacteristic.LockCurrentState),
-    );
+    reply(null, this.doorLockCurrentState);
   }
 
   async getDoorLockTargetState(reply: Function) {
@@ -56,28 +59,23 @@ class CommandDelegator {
 
     const error = await this.makeRequest(method);
 
-    let currentState = this.getDefaultLockState(
-      this.hapCharacteristic.LockCurrentState,
-    );
-
     if (!error) {
-      currentState = isLockTarget
+      this.doorLockCurrentState = isLockTarget
         ? this.hapCharacteristic.LockCurrentState.SECURED
         : this.hapCharacteristic.LockCurrentState.UNSECURED;
     }
 
-    await this.pause(1);
-
-    lockService.setCharacteristic(
-      this.hapCharacteristic.LockCurrentState,
-      currentState,
-    );
-
     reply(error);
+
+    await this.pause(5000);
+
+    this.doorLockCurrentState = this.getDefaultLockState(
+      this.hapCharacteristic.LockCurrentState,
+    );
   }
 
   private pause(ms: number) {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       setTimeout(resolve, ms);
     });
   }
