@@ -11,22 +11,23 @@ const REQUIRED_CONFIG_KEYS = [
 
 export function isValidConfig(config: OnStarAccessoryConfig, log: Function) {
   const missingRequiredKeys: string[] = [];
-  const providedConfigKeys = Object.keys(config);
 
   REQUIRED_CONFIG_KEYS.forEach((reqConfigKey) => {
     if (
-      !providedConfigKeys.includes(reqConfigKey) || 
-      !config[reqConfigKey]
+      typeof config[reqConfigKey] === "undefined" ||
+      config[reqConfigKey] === ""
     ) {
       missingRequiredKeys.push(reqConfigKey);
     }
   });
 
   if (missingRequiredKeys.length) {
-    missingRequiredKeys.forEach((key) => log(`Config Error: Missing required value for ${key}`));
+    missingRequiredKeys.forEach((key) =>
+      log(`Config Error: Missing required value for ${key}`),
+    );
 
     return false;
   }
-  
+
   return true;
 }

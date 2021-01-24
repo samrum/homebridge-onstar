@@ -19,8 +19,18 @@ function createOnStarAccessory(config: OnStarAccessoryConfig): OnStarAccessory {
 }
 
 describe("OnStarAccessory", () => {
+  test("Invalid Config - Missing Required Field", () => {
+    onStarAccessory = createOnStarAccessory({
+      ...TestAccessoryConfig,
+      username: "",
+    });
+
+    expect(onStarAccessory.getServices().length).toEqual(0);
+  });
+
   test("Default Config", () => {
     onStarAccessory = createOnStarAccessory(TestAccessoryConfig);
+    
     expect(onStarAccessory.getServices().length).toEqual(1);
   });
 
