@@ -1,15 +1,15 @@
 import { HapCharacteristic, HapService } from "./hapMocks";
 import OnStarAccessory from "../src/OnStarAccessory";
-import { OnStarAccessoryConfig } from "../src/types";
+import { OnStarAccessoryConfig, OnStarAccessoryConfigKey } from "../src/types";
 jest.mock("../src/CommandDelegator");
 
 const TestAccessoryConfig: OnStarAccessoryConfig = {
-  deviceId: "742249ce-18e0-4c82-8bb2-9975367a7631",
-  vin: "1G2ZF58B774109863",
-  username: "foo@bar.com",
-  password: "p@ssw0rd",
-  onStarPin: "1234",
-  name: "Car",
+  [OnStarAccessoryConfigKey.DeviceId]: "742249ce-18e0-4c82-8bb2-9975367a7631",
+  [OnStarAccessoryConfigKey.Vin]: "1G2ZF58B774109863",
+  [OnStarAccessoryConfigKey.Username]: "foo@bar.com",
+  [OnStarAccessoryConfigKey.Password]: "p@ssw0rd",
+  [OnStarAccessoryConfigKey.OnStarPin]: "1234",
+  [OnStarAccessoryConfigKey.Name]: "Car",
 };
 
 let onStarAccessory: OnStarAccessory;
