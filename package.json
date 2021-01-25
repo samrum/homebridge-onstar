@@ -1,5 +1,5 @@
 {
-  "name": "homebridge-onstar",
+  "name": "homebridge-onstar-beta",
   "version": "1.4.2",
   "description": "Unofficial OnStar plugin for Homebridge",
   "main": "dist/index.js",

@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "OnStar",
+  "pluginAlias": "OnStarBeta",
   "pluginType": "accessory",
   "footerDisplay": "For additional info please check the [homebridge-onstar](https://github.com/samrum/homebridge-onstar/) repo.",
   "schema": {
@@ -9,7 +9,7 @@
         "title": "Name",
         "type": "string",
         "required": true,
-        "default": "Car"
+        "default": "BetaCar"
       },
       "deviceId": {
         "title": "Device ID",
