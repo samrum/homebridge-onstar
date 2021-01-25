@@ -1,10 +1,11 @@
 import OnStar from "onstarjs";
 import CommandDelegator from "./CommandDelegator";
+import { isValidConfig } from './ConfigValidation';
 import { OnStarJsMethod, OnStarAccessoryConfig } from "./types";
 
 class OnStarAccessory {
   private services: any[] = [];
-  private commandDelegator: CommandDelegator;
+  private commandDelegator?: CommandDelegator;
 
   constructor(
     private hapService: any,
@@ -12,6 +13,12 @@ class OnStarAccessory {
     private log: Function,
     private config: OnStarAccessoryConfig,
   ) {
+    if (!isValidConfig(config, log)) {
+      log('Config Error: The provided configuration is not valid.');
+
+      return;
+    }
+    
     this.commandDelegator = new CommandDelegator(
       OnStar.create({
         deviceId: this.config.deviceId,
@@ -52,6 +59,10 @@ class OnStarAccessory {
   private getSwitchService(name: string, method: OnStarJsMethod) {
     const service = new this.hapService.Switch(name, method);
 
+    if (!this.commandDelegator) {
+      return service;
+    }
+
     service
       .getCharacteristic(this.hapCharacteristic.On)
       .on(
@@ -68,6 +79,10 @@ class OnStarAccessory {
 
   private getDoorLockService(name: string) {
     const service = new this.hapService.LockMechanism(name, "doors");
+
+    if (!this.commandDelegator) {
+      return service;
+    }
 
     service
       .getCharacteristic(this.hapCharacteristic.LockCurrentState)
