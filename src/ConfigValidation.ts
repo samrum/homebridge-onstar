@@ -9,7 +9,7 @@ const REQUIRED_CONFIG_KEYS = [
   OnStarAccessoryConfigKey.Name,
 ];
 
-export function isValidConfig(config: OnStarAccessoryConfig, log: Function) {
+export function isValidConfig(config: OnStarAccessoryConfig, log: Function = () => {}) {
   const missingRequiredKeys: string[] = [];
 
   REQUIRED_CONFIG_KEYS.forEach((reqConfigKey) => {

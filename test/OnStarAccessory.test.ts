@@ -19,7 +19,7 @@ function createOnStarAccessory(config: OnStarAccessoryConfig): OnStarAccessory {
 }
 
 describe("OnStarAccessory", () => {
-  test("Invalid Config - Missing Required Field", () => {
+  test("Invalid Config", () => {
     onStarAccessory = createOnStarAccessory({
       ...TestAccessoryConfig,
       username: "",
