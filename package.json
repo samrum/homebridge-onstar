@@ -1,6 +1,6 @@
 {
   "name": "homebridge-onstar",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Unofficial OnStar plugin for Homebridge",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -43,8 +43,8 @@
     "homebridge": ">=0.4.0"
   },
   "funding": {
-    "type" : "paypal",
-    "url" : "https://paypal.me/samrum"
+    "type": "paypal",
+    "url": "https://paypal.me/samrum"
   },
   "homepage": "https://github.com/samrum/homebridge-onstar#readme",
   "dependencies": {
