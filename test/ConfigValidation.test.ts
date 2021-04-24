@@ -16,6 +16,7 @@ describe("isValidConfig", () => {
   });
 
   test("Missing Required Key", () => {
+    // @ts-ignore
     delete testAccessoryConfig[OnStarAccessoryConfigKey.DeviceId];
 
     expect(isValidConfig(testAccessoryConfig)).toEqual(false);
