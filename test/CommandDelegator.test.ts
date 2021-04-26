@@ -4,6 +4,7 @@ import OnStar from "onstarjs";
 import { HapCharacteristic, HapService } from "./hapMocks";
 import CommandDelegator from "../src/CommandDelegator";
 jest.mock("onstarjs");
+jest.mock("../src/utils");
 
 let commandDelegator: CommandDelegator;
 let onStarMock = mock(OnStar);

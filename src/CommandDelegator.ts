@@ -1,6 +1,7 @@
 import OnStar from "onstarjs";
 import { Result } from "onstarjs/dist/types";
 import { OnStarJsMethod } from "./types";
+import { pause } from './utils';
 
 class CommandDelegator {
   private doorLockCurrentState: number;
@@ -67,17 +68,11 @@ class CommandDelegator {
 
     reply(error);
 
-    await this.pause(5000);
+    await pause(5000);
 
     this.doorLockCurrentState = this.getDefaultLockState(
       this.hapCharacteristic.LockCurrentState,
     );
-  }
-
-  private pause(ms: number) {
-    return new Promise((resolve) => {
-      setTimeout(resolve, ms);
-    });
   }
 
   private getDefaultLockState(hapCharacteristicState: any) {
