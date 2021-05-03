@@ -31,7 +31,7 @@ describe("CommandDelegator", () => {
     commandDelegator = createCommandDelegator();
   });
 
-  test("getFalse", done => {
+  test("getFalse", (done) => {
     commandDelegator.getFalse("start", (error: string, value: boolean) => {
       expect(error).toBeNull();
       expect(value).toBeFalsy();
@@ -39,7 +39,7 @@ describe("CommandDelegator", () => {
     });
   });
 
-  test("getDoorLockCurrentState", done => {
+  test("getDoorLockCurrentState", (done) => {
     commandDelegator.getDoorLockCurrentState(
       (error: string | null, state: any) => {
         expect(error).toBeNull();
@@ -49,7 +49,7 @@ describe("CommandDelegator", () => {
     );
   });
 
-  test("getDoorLockTargetState", done => {
+  test("getDoorLockTargetState", (done) => {
     commandDelegator.getDoorLockTargetState(
       (error: string | null, state: any) => {
         expect(error).toBeNull();
@@ -59,7 +59,7 @@ describe("CommandDelegator", () => {
     );
   });
 
-  test("getDoorLockCurrentState - defaultUnlocked", done => {
+  test("getDoorLockCurrentState - defaultUnlocked", (done) => {
     commandDelegator = createCommandDelegator(true);
 
     commandDelegator.getDoorLockCurrentState(
@@ -71,7 +71,7 @@ describe("CommandDelegator", () => {
     );
   });
 
-  test("getDoorLockTargetState - defaultUnlocked", done => {
+  test("getDoorLockTargetState - defaultUnlocked", (done) => {
     commandDelegator = createCommandDelegator(true);
 
     commandDelegator.getDoorLockTargetState(
@@ -83,7 +83,7 @@ describe("CommandDelegator", () => {
     );
   });
 
-  test("setDoorLockTargetState - SECURED", done => {
+  test("setDoorLockTargetState - SECURED", (done) => {
     when(onStarMock.lockDoor()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setDoorLockTargetState(
@@ -96,7 +96,7 @@ describe("CommandDelegator", () => {
     );
   });
 
-  test("setDoorLockTargetState - UNSECURED", done => {
+  test("setDoorLockTargetState - UNSECURED", (done) => {
     when(onStarMock.unlockDoor()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setDoorLockTargetState(
@@ -109,7 +109,7 @@ describe("CommandDelegator", () => {
     );
   });
 
-  test("setDoorLockTargetState - Error", done => {
+  test("setDoorLockTargetState - Error", (done) => {
     when(onStarMock.lockDoor()).thenThrow(
       new Error("setDoorLockTargetState Failure"),
     );
@@ -125,7 +125,7 @@ describe("CommandDelegator", () => {
     );
   });
 
-  test("setSwitch - Start On", done => {
+  test("setSwitch - Start On", (done) => {
     when(onStarMock.start()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setSwitch("start", true, (error: string) => {
@@ -134,7 +134,7 @@ describe("CommandDelegator", () => {
     });
   });
 
-  test("setSwitch - Start Off", done => {
+  test("setSwitch - Start Off", (done) => {
     when(onStarMock.cancelStart()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setSwitch("start", false, (error: string) => {
@@ -143,7 +143,7 @@ describe("CommandDelegator", () => {
     });
   });
 
-  test("setSwitch - Alert On", done => {
+  test("setSwitch - Alert On", (done) => {
     when(onStarMock.alert()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setSwitch("alert", true, (error: string) => {
@@ -152,7 +152,7 @@ describe("CommandDelegator", () => {
     });
   });
 
-  test("setSwitch - Alert Off", done => {
+  test("setSwitch - Alert Off", (done) => {
     when(onStarMock.cancelAlert()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setSwitch("alert", false, (error: string) => {
@@ -161,7 +161,7 @@ describe("CommandDelegator", () => {
     });
   });
 
-  test("setSwitch - Charger On", done => {
+  test("setSwitch - Charger On", (done) => {
     when(onStarMock.chargeOverride()).thenResolve(onStarJsResponseInProgress);
 
     commandDelegator.setSwitch("chargeOverride", true, (error: string) => {
@@ -170,14 +170,14 @@ describe("CommandDelegator", () => {
     });
   });
 
-  test("setSwitch - Charger Off", done => {
+  test("setSwitch - Charger Off", (done) => {
     commandDelegator.setSwitch("chargeOverride", false, (error: string) => {
       expect(error).toEqual("chargeOverride: Off Method Not Available");
       done();
     });
   });
 
-  test("setSwitchError", done => {
+  test("setSwitchError", (done) => {
     when(onStarMock.start()).thenThrow(new Error("Start Failure"));
 
     commandDelegator.setSwitch("start", true, (error: string) => {
