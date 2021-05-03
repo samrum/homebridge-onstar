@@ -3609,13 +3609,13 @@ onetime@^5.1.0:
     mimic-fn "^2.1.0"
 
 onstarjs@^2.0.6:
-  version "2.0.14"
-  resolved "https://registry.yarnpkg.com/onstarjs/-/onstarjs-2.0.14.tgz#0e77d06b79c68cfaa57d421b7b8f0be9d0e082c8"
-  integrity sha512-VIQGG3SfeQqQme8IdvBxS0xdrfMuyasLo9x+thEGnEJhNrOsMdwFHBn/LN7wwAcqEUHILnd6tI5v99DMAf25Jw==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/onstarjs/-/onstarjs-2.1.0.tgz#1ce39e9dcb6e231b1fd2fe0b7aa5c6a0d39d2a57"
+  integrity sha512-67nI6Hyv6H53yX6xd2J+CrluZ32lEgn9X1DYKbF1CZbgZQQzDDRicaLAZMq1B+3nNRxA6gpejrma/NLpIXcT/A==
   dependencies:
     axios "^0.21.1"
     jsonwebtoken "^8.5.1"
-    uuid "^3.3.2"
+    uuid "^8.3.2"
 
 optionator@^0.8.1:
   version "0.8.3"
@@ -4945,7 +4945,7 @@ uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.3.0:
+uuid@^8.3.0, uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
