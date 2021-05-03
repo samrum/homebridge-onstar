@@ -6,7 +6,8 @@ let testAccessoryConfig: OnStarAccessoryConfig;
 describe("isValidConfig", () => {
   beforeEach(() => {
     testAccessoryConfig = {
-      [OnStarAccessoryConfigKey.DeviceId]: "742249ce-18e0-4c82-8bb2-9975367a7631",
+      [OnStarAccessoryConfigKey.DeviceId]:
+        "742249ce-18e0-4c82-8bb2-9975367a7631",
       [OnStarAccessoryConfigKey.Vin]: "1G2ZF58B774109863",
       [OnStarAccessoryConfigKey.Username]: "foo@bar.com",
       [OnStarAccessoryConfigKey.Password]: "p@ssw0rd",
