@@ -31,4 +31,4 @@ export type OnStarAccessoryConfig = {
   [OnStarAccessoryConfigKey.EnableCharger]?: boolean;
   [OnStarAccessoryConfigKey.EnableDoors]?: boolean;
   [OnStarAccessoryConfigKey.DoorsDefaultToUnlocked]?: boolean;
-}
+};

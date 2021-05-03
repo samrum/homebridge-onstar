@@ -30,7 +30,7 @@ describe("OnStarAccessory", () => {
 
   test("Default Config", () => {
     onStarAccessory = createOnStarAccessory(TestAccessoryConfig);
-    
+
     expect(onStarAccessory.getServices().length).toEqual(1);
   });
 
