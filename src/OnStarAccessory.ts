@@ -50,10 +50,54 @@ class OnStarAccessory {
     if (this.config.enableDoors) {
       this.services.push(this.getDoorLockService(`${name} Doors`));
     }
+
+    if (this.config.enableBattery) {
+      this.services.push(this.getBatteryService(name));
+    }
   }
 
   getServices() {
     return this.services;
+  }
+
+  private getBatteryService(name: string) {
+    const service = new this.hapService.BatteryService(name, "vehicle");
+
+    if (!this.commandDelegator) {
+      return service;
+    }
+
+    service
+      .getCharacteristic(this.hapCharacteristic.BatteryLevel)
+      .on(
+        "get",
+        this.commandDelegator.getBatteryLevel.bind(
+          this.commandDelegator,
+          service,
+        ),
+      );
+
+    service
+      .getCharacteristic(this.hapCharacteristic.ChargingState)
+      .on(
+        "get",
+        this.commandDelegator.getChargingState.bind(
+          this.commandDelegator,
+          service,
+        ),
+      );
+
+    service
+      .getCharacteristic(this.hapCharacteristic.StatusLowBattery)
+      .on(
+        "get",
+        this.commandDelegator.getStatusLowBattery.bind(
+          this.commandDelegator,
+          service,
+        ),
+      );
+
+    return service;
   }
 
   private getSwitchService(name: string, method: OnStarJsMethod) {
@@ -78,7 +122,7 @@ class OnStarAccessory {
   }
 
   private getDoorLockService(name: string) {
-    const service = new this.hapService.LockMechanism(name, "doors");
+    const service = new this.hapService.LockMechanism(name, "vehicle");
 
     if (!this.commandDelegator) {
       return service;

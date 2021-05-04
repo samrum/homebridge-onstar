@@ -5,7 +5,8 @@ export type OnStarJsMethod =
   | "unlockDoor"
   | "alert"
   | "cancelAlert"
-  | "chargeOverride";
+  | "chargeOverride"
+  | "diagnostics";
 
 export enum OnStarAccessoryConfigKey {
   DeviceId = "deviceId",
@@ -15,6 +16,7 @@ export enum OnStarAccessoryConfigKey {
   OnStarPin = "onStarPin",
   Name = "name",
   EnableAlert = "enableAlert",
+  EnableBattery = "enableBattery",
   EnableCharger = "enableCharger",
   EnableDoors = "enableDoors",
   DoorsDefaultToUnlocked = "doorsDefaultToUnlocked",
@@ -28,7 +30,15 @@ export type OnStarAccessoryConfig = {
   [OnStarAccessoryConfigKey.OnStarPin]: string;
   [OnStarAccessoryConfigKey.Name]: string;
   [OnStarAccessoryConfigKey.EnableAlert]?: boolean;
+  [OnStarAccessoryConfigKey.EnableBattery]?: boolean;
   [OnStarAccessoryConfigKey.EnableCharger]?: boolean;
   [OnStarAccessoryConfigKey.EnableDoors]?: boolean;
   [OnStarAccessoryConfigKey.DoorsDefaultToUnlocked]?: boolean;
 };
+
+export interface DiagnosticInfo {
+  batteryLevel: number;
+  chargingState: number;
+  lowBattery: boolean;
+  timestamp: number;
+}
