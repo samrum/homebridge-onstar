@@ -3112,9 +3112,9 @@ lines-and-columns@^1.1.6:
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
 lint-staged@>=10:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-11.0.0.tgz#24d0a95aa316ba28e257f5c4613369a75a10c712"
-  integrity sha512-3rsRIoyaE8IphSUtO1RVTFl1e0SLBtxxUOPBtHxQgBHS5/i6nqvjcUfNioMa4BU9yGnPzbO+xkfLtXtxBpCzjw==
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-11.1.1.tgz#9c2018b872654cf80b2b1ff5a10b6b74aef6e300"
+  integrity sha512-eTNGe6i78PSUUH2BZi1gZmGmNfb8IeN4z2OzMYxSZ1qnP1WXKn1E7D+OHwLbRDm/wQINnzIj0bsKJ6lLVSuZiQ==
   dependencies:
     chalk "^4.1.1"
     cli-truncate "^2.1.0"
@@ -3626,9 +3626,9 @@ onetime@^5.1.0, onetime@^5.1.2:
     mimic-fn "^2.1.0"
 
 onstarjs@^2.0.6:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/onstarjs/-/onstarjs-2.2.2.tgz#2b81cbd953a2c55b8c2effc3357df14cc8715816"
-  integrity sha512-u4eGmTy2YVQPbjDioo5HntN/iIqJujAnDTaQY4OVag9TaTV7dA4yXN/629/d1m6pDZfBYF1Z8+vThdb5ovBHew==
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/onstarjs/-/onstarjs-2.2.3.tgz#495e4fcb4351ba7d19c787930b0807df371b9d24"
+  integrity sha512-/tRlNuQTLYjaAojHmOSUgnPlDn3mpO2/KgosXPygf+h5j8QWsurLqnRWwfEs+s58v84L1CaEwgn44PXwiiPQmg==
   dependencies:
     axios "^0.21.1"
     jsonwebtoken "^8.5.1"
