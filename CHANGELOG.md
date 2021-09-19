@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.6](https://github.com/samrum/homebridge-onstar/compare/v1.5.5...v1.5.6) (2021-09-19)
+
+
+### Bug Fixes
+
+* **deps:** bump axios from 0.21.1 to 0.21.4 ([#133](https://github.com/samrum/homebridge-onstar/issues/133)) ([57e4fc9](https://github.com/samrum/homebridge-onstar/commit/57e4fc9519fe9563f19aea5fe86b4372bf299c78))
+* **deps:** bump onstarjs from 2.2.3 to 2.2.4 ([#126](https://github.com/samrum/homebridge-onstar/issues/126)) ([46e1d76](https://github.com/samrum/homebridge-onstar/commit/46e1d7694f8eac7fa3f4575d5a6985ca921dc244))
+* **deps:** bump path-parse from 1.0.6 to 1.0.7 ([#122](https://github.com/samrum/homebridge-onstar/issues/122)) ([9be9d17](https://github.com/samrum/homebridge-onstar/commit/9be9d17a0e0abf2186dab298a466f628c8237005))
+
 ### [1.5.5](https://github.com/samrum/homebridge-onstar/compare/v1.5.4...v1.5.5) (2021-08-04)
 
 
