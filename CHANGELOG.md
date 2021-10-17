@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.8](https://github.com/samrum/homebridge-onstar/compare/v1.5.6...v1.5.8) (2021-10-17)
+
+
+### Bug Fixes
+
+* **deps:** bump ansi-regex from 5.0.0 to 5.0.1 ([#142](https://github.com/samrum/homebridge-onstar/issues/142)) ([c2a8a0e](https://github.com/samrum/homebridge-onstar/commit/c2a8a0e75a2ca4e323114372bfb751937fa709c8))
+* **deps:** bump onstarjs from 2.2.4 to 2.3.0 ([#140](https://github.com/samrum/homebridge-onstar/issues/140)) ([cebf968](https://github.com/samrum/homebridge-onstar/commit/cebf9680590fedce273d80af07967b2224be951b))
+* **deps:** bump tmpl from 1.0.4 to 1.0.5 ([#134](https://github.com/samrum/homebridge-onstar/issues/134)) ([05e8d92](https://github.com/samrum/homebridge-onstar/commit/05e8d9297b9606e4df590d38dd32b0e54f7206f5))
+
 ### [1.5.6](https://github.com/samrum/homebridge-onstar/compare/v1.5.5...v1.5.6) (2021-09-19)
 
 
