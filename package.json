@@ -13,14 +13,17 @@
     "build": "rm -rf dist && rollup -c",
     "dev": "rm -rf dist && rollup -c -w",
     "lint": "prettier --write .",
-    "prepublishOnly": "yarn run test && yarn run build",
-    "prerelease": "yarn run test && yarn run build",
     "release": "standard-version --sign",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "prepare": "husky install"
   },
   "sideEffects": false,
+  "standard-version": {
+    "scripts": {
+      "prerelease": "yarn test && yarn build"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samrum/homebridge-onstar.git"
