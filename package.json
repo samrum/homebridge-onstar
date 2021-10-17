@@ -70,6 +70,6 @@
     "typescript": "^4.2.4"
   },
   "lint-staged": {
-    "*.{js,css,md,json}": "prettier --write"
+    "*.{js,css,md,json,yml}": "prettier --write"
   }
 }
