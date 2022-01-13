@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.10](https://github.com/samrum/homebridge-onstar/compare/v1.5.9...v1.5.10) (2022-01-13)
+
+
+### Bug Fixes
+
+* **deps:** bump follow-redirects from 1.14.4 to 1.14.7 ([#172](https://github.com/samrum/homebridge-onstar/issues/172)) ([c060247](https://github.com/samrum/homebridge-onstar/commit/c060247bd5f48e5da121019364122f7be88f8e67))
+* **deps:** bump onstarjs from 2.3.1 to 2.3.2 ([#173](https://github.com/samrum/homebridge-onstar/issues/173)) ([473c75d](https://github.com/samrum/homebridge-onstar/commit/473c75de5c9d674c470bcf46504a9b83d86a80f3))
+
 ### [1.5.9](https://github.com/samrum/homebridge-onstar/compare/v1.5.8...v1.5.9) (2021-12-18)
 
 
