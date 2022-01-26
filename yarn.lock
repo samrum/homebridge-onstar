@@ -3631,9 +3631,9 @@ onetime@^5.1.0, onetime@^5.1.2:
     mimic-fn "^2.1.0"
 
 onstarjs@^2.0.6:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/onstarjs/-/onstarjs-2.3.2.tgz#897082a921c7377fc2e00075162be46beb4fe42f"
-  integrity sha512-3o5hZIaS2HMUI2ijgz79QZvT+v5EjyBiBkI0mhAm9fMQ0zQINz+Co/9dYhRJxPI40L8L4jAkHa93gnLzwAH6Iw==
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/onstarjs/-/onstarjs-2.3.3.tgz#78c8b37d61e05996a1cd26948263f072acfcd4c6"
+  integrity sha512-RZ67JyWeWmRRo1qUPcHgIcPToQWx/lNZbyooKGxTDthJ4FFZr5fs/9r8p8XpgDyGsaiSJlDDB8E3xWnnZrsUVA==
   dependencies:
     axios "^0.21.1"
     jsonwebtoken "^8.5.1"
