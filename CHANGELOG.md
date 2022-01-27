@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.11](https://github.com/samrum/homebridge-onstar/compare/v1.5.10...v1.5.11) (2022-01-27)
+
+
+### Bug Fixes
+
+* **deps:** bump onstarjs from 2.3.2 to 2.3.3 ([#184](https://github.com/samrum/homebridge-onstar/issues/184)) ([d1a9017](https://github.com/samrum/homebridge-onstar/commit/d1a901725f0a60b088a716baa73dd0684a58c67c))
+* **deps:** bump shelljs from 0.8.4 to 0.8.5 ([#175](https://github.com/samrum/homebridge-onstar/issues/175)) ([e627a9e](https://github.com/samrum/homebridge-onstar/commit/e627a9e3c31ad3baf3adf581548efdd5e316f0de))
+* **deps:** bump trim-off-newlines from 1.0.1 to 1.0.3 ([#181](https://github.com/samrum/homebridge-onstar/issues/181)) ([5c85194](https://github.com/samrum/homebridge-onstar/commit/5c85194509cf1fd51d263334690a5d4a6054ccb7))
+
 ### [1.5.10](https://github.com/samrum/homebridge-onstar/compare/v1.5.9...v1.5.10) (2022-01-13)
 
 
