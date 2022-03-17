@@ -249,7 +249,9 @@ class CommandDelegator {
 
       return result.response?.data.commandResponse;
     } catch (e) {
-      const errorMessage = `${method}: Error: ${e.message}`;
+      const errorMessage = `${method}: Error: ${
+        e instanceof Error ? e.message : "unknown error"
+      }`;
 
       this.log(errorMessage);
 

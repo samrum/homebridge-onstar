@@ -19,7 +19,7 @@ Homebridge support for OnStar!
           "accessory": "OnStar",
           "name": "Car",
           "deviceId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
-          "vin": "11111111111111111",
+          "vin": "1G2ZF58B774109863",
           "username": "foo@bar.com",
           "password": "p@ssw0rd",
           "onStarPin": "1234"

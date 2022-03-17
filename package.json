@@ -1,6 +1,6 @@
 {
   "name": "homebridge-onstar",
-  "version": "1.5.2",
+  "version": "1.5.12",
   "description": "Unofficial OnStar plugin for Homebridge",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -13,14 +13,17 @@
     "build": "rm -rf dist && rollup -c",
     "dev": "rm -rf dist && rollup -c -w",
     "lint": "prettier --write .",
-    "prepublishOnly": "yarn run test && yarn run build",
-    "prerelease": "yarn run test && yarn run build",
     "release": "standard-version --sign",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "prepare": "husky install"
   },
   "sideEffects": false,
+  "standard-version": {
+    "scripts": {
+      "prerelease": "yarn test && yarn build"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samrum/homebridge-onstar.git"
@@ -50,16 +53,16 @@
   },
   "homepage": "https://github.com/samrum/homebridge-onstar#readme",
   "dependencies": {
+    "@rollup/plugin-typescript": "^8.3.0",
     "onstarjs": "^2.0.6"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.22",
+    "@types/jest": "^27.0.1",
     "husky": ">=6",
     "jest": "^26.6.3",
     "lint-staged": ">=10",
-    "prettier": "^2.0.5",
+    "prettier": "2.3.2",
     "rollup": "^2.45.2",
-    "rollup-plugin-typescript2": "^0.30.0",
     "standard-version": "^9.1.0",
     "ts-jest": "^26.4.4",
     "ts-mockito": "^2.3.1",
@@ -67,6 +70,6 @@
     "typescript": "^4.2.4"
   },
   "lint-staged": {
-    "*.{js,css,md,json}": "prettier --write"
+    "*.{js,css,md,json,yml}": "prettier --write"
   }
 }
