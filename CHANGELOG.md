@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.16](https://github.com/samrum/homebridge-onstar/compare/v1.5.15...v1.5.16) (2022-06-01)
+
+
+### Bug Fixes
+
+* **deps:** bump @rollup/plugin-typescript from 8.3.1 to 8.3.2 ([#213](https://github.com/samrum/homebridge-onstar/issues/213)) ([0394dde](https://github.com/samrum/homebridge-onstar/commit/0394ddecaee86a9b08033f47462a87e57030213b))
+* **deps:** bump onstarjs from 2.3.7 to 2.3.8 ([#238](https://github.com/samrum/homebridge-onstar/issues/238)) ([c271f76](https://github.com/samrum/homebridge-onstar/commit/c271f76db2999c2d9bdb298f9f884aa3511007da))
+
 ### [1.5.15](https://github.com/samrum/homebridge-onstar/compare/v1.5.14...v1.5.15) (2022-05-04)
 
 
