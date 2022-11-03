@@ -3604,10 +3604,10 @@ onetime@^5.1.0, onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
-onstarjs@^2.0.6:
-  version "2.3.12"
-  resolved "https://registry.yarnpkg.com/onstarjs/-/onstarjs-2.3.12.tgz#be88416940c45f1ab175578727942ddbeb262485"
-  integrity sha512-7D2VdD1Ad+AubAXO59AAiLjENGeHC2ADvxNQSK0UFr1+Tn96QKVeL24QGe9Zqm9iwFj/u7afVS1fYQdwEh9bOg==
+onstarjs@^2.3.13:
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/onstarjs/-/onstarjs-2.3.13.tgz#d89ba37dd52867a17b4430115ba37d438979c6d1"
+  integrity sha512-TnB9+PVP/Oh58TcRjIyN6Fsw0cRyoOOQcvaPH1G/nSHwm9lNQdSOnuPnXf45eO1hV/dTwXXw2idCnOSmCDQBUw==
   dependencies:
     axios "^0.21.1"
     jsonwebtoken "^8.5.1"
