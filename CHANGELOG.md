@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.21](https://github.com/samrum/homebridge-onstar/compare/v1.5.20...v1.5.21) (2022-12-31)
+
+
+### Bug Fixes
+
+* **deps:** bump decode-uri-component from 0.2.0 to 0.2.2 ([#250](https://github.com/samrum/homebridge-onstar/issues/250)) ([c1dfc9e](https://github.com/samrum/homebridge-onstar/commit/c1dfc9edbe69ab5b3e9cf4507b973827c311b15a))
+* **deps:** bump json5 from 2.2.0 to 2.2.3 ([#254](https://github.com/samrum/homebridge-onstar/issues/254)) ([add5c54](https://github.com/samrum/homebridge-onstar/commit/add5c54e385756a33e32fa69814a5810657ab9f5))
+* **deps:** bump minimatch from 3.0.4 to 3.1.2 ([#251](https://github.com/samrum/homebridge-onstar/issues/251)) ([b45eb09](https://github.com/samrum/homebridge-onstar/commit/b45eb0906929a10da6ec3b6223b03455326c3c7f))
+* **deps:** bump onstarjs from 2.3.13 to 2.3.14 ([#253](https://github.com/samrum/homebridge-onstar/issues/253)) ([75f5125](https://github.com/samrum/homebridge-onstar/commit/75f5125ed703d65e0fb7e725fe6b1243174ec065))
+* **deps:** bump qs from 6.5.2 to 6.5.3 ([#252](https://github.com/samrum/homebridge-onstar/issues/252)) ([37dc0a4](https://github.com/samrum/homebridge-onstar/commit/37dc0a407b18515d24add59237d58943a211638d))
+
 ### [1.5.20](https://github.com/samrum/homebridge-onstar/compare/v1.5.19...v1.5.20) (2022-11-03)
 
 
