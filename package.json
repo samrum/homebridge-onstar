@@ -54,7 +54,7 @@
   "homepage": "https://github.com/samrum/homebridge-onstar#readme",
   "dependencies": {
     "@rollup/plugin-typescript": "^8.3.0",
-    "onstarjs": "^2.3.13"
+    "onstarjs": "^2.3.18"
   },
   "devDependencies": {
     "@types/jest": "^27.0.1",
