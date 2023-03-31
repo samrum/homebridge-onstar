@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.25](https://github.com/samrum/homebridge-onstar/compare/v1.5.24...v1.5.25) (2023-03-31)
+
+
+### Bug Fixes
+
+* **deps:** bump onstarjs from 2.3.17 to 2.3.18 ([#261](https://github.com/samrum/homebridge-onstar/issues/261)) ([cd85d03](https://github.com/samrum/homebridge-onstar/commit/cd85d03c990e8742cfffd4d3bc69000465178700))
+
 ### [1.5.24](https://github.com/samrum/homebridge-onstar/compare/v1.5.23...v1.5.24) (2023-03-09)
 
 
