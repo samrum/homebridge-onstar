@@ -1,11 +1,18 @@
 {
   "name": "homebridge-onstar",
-  "version": "1.5.25",
   "description": "Unofficial OnStar plugin for Homebridge",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "version": "1.5.25",
   "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
     "dist",
     "config.schema.json"
@@ -55,9 +62,6 @@
     "url": "https://paypal.me/samrum"
   },
   "homepage": "https://github.com/samrum/homebridge-onstar#readme",
-  "dependencies": {
-    "onstarjs": "^2.3.19"
-  },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.0",
     "@types/jest": "^29.5.1",
@@ -74,5 +78,8 @@
   },
   "lint-staged": {
     "*.{js,css,md,json,yml}": "prettier --write"
+  },
+  "dependencies": {
+    "onstarjs": "^2.3.21"
   }
 }
