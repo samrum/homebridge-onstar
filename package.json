@@ -31,7 +31,7 @@
   "sideEffects": false,
   "standard-version": {
     "scripts": {
-      "prerelease": "yarn test && yarn build"
+      "prerelease": "pnpm test && pnpm build"
     }
   },
   "repository": {
