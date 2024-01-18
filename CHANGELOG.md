@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.35](https://github.com/samrum/homebridge-onstar/compare/v1.5.34...v1.5.35) (2024-01-18)
+
 ### [1.5.34](https://github.com/samrum/homebridge-onstar/compare/v1.5.33...v1.5.34) (2023-11-15)
 
 ### [1.5.33](https://github.com/samrum/homebridge-onstar/compare/v1.5.32...v1.5.33) (2023-11-01)
