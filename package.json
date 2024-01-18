@@ -81,6 +81,6 @@
     "*.{js,css,md,json,yml}": "prettier --write"
   },
   "dependencies": {
-    "onstarjs": "^2.3.29"
+    "onstarjs": "^2.3.30"
   }
 }
