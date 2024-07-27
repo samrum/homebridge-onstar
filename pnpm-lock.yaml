@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   onstarjs:
-    specifier: ^2.5.2
-    version: 2.5.2
+    specifier: ^2.5.3
+    version: 2.5.3
 
 devDependencies:
   '@rollup/plugin-typescript':
@@ -2758,8 +2758,8 @@ packages:
       mimic-fn: 4.0.0
     dev: true
 
-  /onstarjs@2.5.2:
-    resolution: {integrity: sha512-55DBUIro8/5NYjhnm0jAlx31BBdKcUGkgRtgvArbxyeUMXJdhP76UyXuvRrZS8sOFMnAX2Mya/qs+oMA0au85Q==}
+  /onstarjs@2.5.3:
+    resolution: {integrity: sha512-pzWk9XzScjSc+rQqlD7KVtRIQW3opcqGV/XRIIYlBgeLb0XENh02myv+WpylVUdzVTpP+OtOZawx2KI8jQrPow==}
     dependencies:
       axios: 1.6.1
       jsonwebtoken: 9.0.0
