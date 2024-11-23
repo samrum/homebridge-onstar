@@ -1,4 +1,4 @@
-import OnStar from "aonstarjs";
+import OnStar from "onstarjs2";
 import { Result } from "aonstarjs/dist/types";
 import { OnStarJsMethod } from "./types";
 import { pause } from "./utils";
