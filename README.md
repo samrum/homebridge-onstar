@@ -6,6 +6,23 @@ Homebridge support for OnStar!
 
 **Use at your own risk. This is an unofficial plugin.**
 
+# New Requirement as of 2024-11-19
+
+Updated to use TOTP to fulfill new authentication process from GM.
+
+You will need to change your OnStar account's MFA method to "Third-Party Authenticator App"
+
+The "Third-Party Authenticator App" option doesn't seem to show up on mobile, so please try from a desktop browser.
+
+You will need to capture your TOTP key from the "Third-Party Authenticator App" setup so that you can provide it in your .env or initialization config.
+
+You may be able to obtain your TOTP key by inspecting/hovering over the link under the QR code when you are setting it up.
+
+If you use an authenticator app such as Stratum, Bitwarden, or Vaultwarden that allows you to view your TOTP key, you can view it at any time.
+
+In the IOS Passwords app you can tap "Copy Setup URL" and obtain the secret from the copied data.
+
+If you cannot find the option to configure a "Third-Party Authenticator App" on your GM account page, try contacting OnStar to see if there is another way to enable it.
 # Configuration
 
 ## Basic Config (Climate)
@@ -20,7 +37,7 @@ Homebridge support for OnStar!
           "username": "foo@bar.com",
           "password": "p@ssw0rd",
           "onStarPin": "1234"
-          "TOTPKEY": "XXXXXXXXXXXXXX",
+          "totpKey": "XXXXXXXXXXXXXX",
         }
       ]
     }
