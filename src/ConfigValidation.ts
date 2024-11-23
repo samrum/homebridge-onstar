@@ -6,6 +6,7 @@ const REQUIRED_CONFIG_KEYS = [
   OnStarAccessoryConfigKey.Username,
   OnStarAccessoryConfigKey.Password,
   OnStarAccessoryConfigKey.OnStarPin,
+  OnStarAccessoryConfigKey.TOTPKEY,
   OnStarAccessoryConfigKey.Name,
 ];
 
