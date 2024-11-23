@@ -1,6 +1,6 @@
 import { mock, instance, when } from "ts-mockito";
 
-import OnStar from "aonstarjs";
+import OnStar from "onstarjs2";
 import { HapCharacteristic, HapService } from "./hapMocks";
 import CommandDelegator from "../src/CommandDelegator";
 jest.mock("onstarjs");
