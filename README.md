@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/homebridge-onstar2.svg)](https://badge.fury.io/js/homebridge-onstar2)
 
-[![Coverage Status](https://coveralls.io/repos/github/samrum/homebridge-onstar/badge.svg?branch=master)](https://coveralls.io/github/samrum/homebridge-onstar?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/samrum/homebridge-onstar2/badge.svg?branch=master)](https://coveralls.io/github/samrum/homebridge-onstar2?branch=master)
 
 Homebridge support for OnStar!
 
