@@ -2,8 +2,6 @@
 
 [![npm version](https://badge.fury.io/js/homebridge-onstar2.svg)](https://badge.fury.io/js/homebridge-onstar2)
 
-[![Coverage Status](https://coveralls.io/repos/github/samrum/homebridge-onstar2/badge.svg?branch=master)](https://coveralls.io/github/samrum/homebridge-onstar2?branch=master)
-
 Homebridge support for OnStar!
 
 **Use at your own risk. This is an unofficial plugin.**
@@ -22,7 +20,7 @@ Homebridge support for OnStar!
           "username": "foo@bar.com",
           "password": "p@ssw0rd",
           "onStarPin": "1234"
-          "TOTPKEY": "6eufgy2398reweg0",
+          "TOTPKEY": "XXXXXXXXXXXXXX",
         }
       ]
     }
@@ -71,10 +69,12 @@ Siri command: "Turn on the Car alert"
 
 - Toggling switches off is possible using Siri/Shortcuts/Scenes
 - When secret keys are rotated by MyChevrolet/OnStar, the plugin may stop working until the keys are updated.
-- homebridge-onstar will return success once requests are considered _In Progress_. As such, OnStar request failures after the initial request are made won't be handled.
+- homebridge-onstar2 will return success once requests are considered _In Progress_. As such, OnStar request failures after the initial request are made won't be handled.
 
 # Credits
 
 [OnStarJS](https://github.com/samrum/OnStarJS) (Shoutout to [mikenemat](https://github.com/mikenemat/) and [gm-onstar-probe](https://github.com/mikenemat/gm-onstar-probe))
 
 [homebridge-tesla](https://github.com/nfarina/homebridge-tesla) for being a great reference to refer to on how to set up various homebridge services.
+
+Credits to Ashton Smith for the updated homebridge-onstar version support.
