@@ -3,7 +3,7 @@ import { OnStarAccessoryConfig } from "./types";
 
 export default function HomebridgeOnStar(homebridge: any) {
   homebridge.registerAccessory(
-    "homebridge-aonstar",
+    "homebridge-onstar2",
     "OnStar",
     OnStarAccessory.bind(
       OnStarAccessory,
