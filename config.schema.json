@@ -42,6 +42,12 @@
         "required": true,
         "default": ""
       },
+       "TOTPKEY": {
+        "title": "TOTP KEY",
+        "type": "string",
+        "required": true,
+        "default": ""
+      },
       "enableAlert": {
         "title": "Enable Alert Switch",
         "type": "boolean",
