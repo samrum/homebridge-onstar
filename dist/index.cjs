@@ -217,4 +217,4 @@ function HomebridgeOnStar(homebridge) {
     homebridge.registerAccessory("homebridge-onstar2", "OnStar", OnStarAccessory.bind(OnStarAccessory, homebridge.hap.Service, homebridge.hap.Characteristic));
 }
 
-module.exports = HomebridgeOnStar2;
+module.exports = HomebridgeOnStar;
