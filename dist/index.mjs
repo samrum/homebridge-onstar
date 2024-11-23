@@ -117,7 +117,7 @@ var OnStarAccessoryConfigKey;
     OnStarAccessoryConfigKey["Username"] = "username";
     OnStarAccessoryConfigKey["Password"] = "password";
     OnStarAccessoryConfigKey["OnStarPin"] = "onStarPin";
-    OnStarAccessoryConfigKey["totpKey"] = "onstarTOTP";
+    OnStarAccessoryConfigKey["TOTPKEY"] = "onstarTOTP";
     OnStarAccessoryConfigKey["Name"] = "name";
     OnStarAccessoryConfigKey["EnableAlert"] = "enableAlert";
     OnStarAccessoryConfigKey["EnableCharger"] = "enableCharger";
@@ -131,7 +131,7 @@ const REQUIRED_CONFIG_KEYS = [
     OnStarAccessoryConfigKey.Username,
     OnStarAccessoryConfigKey.Password,
     OnStarAccessoryConfigKey.OnStarPin,
-    OnStarAccessoryConfigKey.totpKey,
+    OnStarAccessoryConfigKey.TOTPKEY,
     OnStarAccessoryConfigKey.Name,
 ];
 function isValidConfig(config, log = () => { }) {
