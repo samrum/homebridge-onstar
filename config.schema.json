@@ -1,5 +1,5 @@
 {
-  "plugin": "OnStar",
+  "pluginAlias": "OnStar",
   "pluginType": "accessory",
   "footerDisplay": "For additional info please check the [homebridge-onstar](https://github.com/samrum/homebridge-onstar/) repo.",
   "schema": {
