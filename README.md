@@ -1,7 +1,7 @@
 # homebridge-aonstar (OnStar Accessory)
 
-[![npm version](https://badge.fury.io/js/homebridge-onstar.svg)](https://badge.fury.io/js/homebridge-onstar)
-[![build](https://github.com/samrum/homebridge-onstar/workflows/build/badge.svg)](https://github.com/samrum/homebridge-onstar/actions?query=workflow%3Abuild)
+[![npm version](https://badge.fury.io/js/homebridge-onstar2.svg)](https://badge.fury.io/js/homebridge-onstar2)
+
 [![Coverage Status](https://coveralls.io/repos/github/samrum/homebridge-onstar/badge.svg?branch=master)](https://coveralls.io/github/samrum/homebridge-onstar?branch=master)
 
 Homebridge support for OnStar!
