@@ -12,6 +12,7 @@ describe("isValidConfig", () => {
       [OnStarAccessoryConfigKey.Username]: "foo@bar.com",
       [OnStarAccessoryConfigKey.Password]: "p@ssw0rd",
       [OnStarAccessoryConfigKey.OnStarPin]: "1234",
+      [OnStarAccessoryConfigKey.TOTPKEY]: "6eufgy2398reweg0",
       [OnStarAccessoryConfigKey.Name]: "Car",
     };
   });
