@@ -37,7 +37,7 @@ If you cannot find the option to configure a "Third-Party Authenticator App" on 
           "username": "foo@bar.com",
           "password": "p@ssw0rd",
           "onStarPin": "1234"
-          "totpKey": "XXXXXXXXXXXXXX",
+          "onStarTOTP": "XXXXXXXXXXXXXX",
         }
       ]
     }
