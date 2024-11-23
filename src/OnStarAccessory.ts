@@ -26,6 +26,7 @@ class OnStarAccessory {
         username: this.config.username,
         password: this.config.password,
         onStarPin: this.config.onStarPin,
+        TOTPKEY: this.config.TOTPKEY,
         checkRequestStatus: false,
       }),
       this.log,
