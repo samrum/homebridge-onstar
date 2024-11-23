@@ -119,7 +119,7 @@ var OnStarAccessoryConfigKey;
     OnStarAccessoryConfigKey["Username"] = "username";
     OnStarAccessoryConfigKey["Password"] = "password";
     OnStarAccessoryConfigKey["OnStarPin"] = "onStarPin";
-    OnStarAccessoryConfigKey["TOTPKEY"] = "TOTPKEY";
+    OnStarAccessoryConfigKey["TOTPKEY"] = "totpKey";
     OnStarAccessoryConfigKey["Name"] = "name";
     OnStarAccessoryConfigKey["EnableAlert"] = "enableAlert";
     OnStarAccessoryConfigKey["EnableCharger"] = "enableCharger";
@@ -168,7 +168,7 @@ class OnStarAccessory {
             username: this.config.username,
             password: this.config.password,
             onStarPin: this.config.onStarPin,
-            TOTPKEY: this.config.TOTPKEY,
+            TOTPKEY: this.config.totpKey,
             checkRequestStatus: false,
         }), this.log, this.hapCharacteristic, this.config.doorsDefaultToUnlocked || false);
         const name = this.config.name;
@@ -217,4 +217,4 @@ function HomebridgeOnStar(homebridge) {
     homebridge.registerAccessory("homebridge-onstar2", "OnStar", OnStarAccessory.bind(OnStarAccessory, homebridge.hap.Service, homebridge.hap.Characteristic));
 }
 
-module.exports = HomebridgeOnStar;
+module.exports = HomebridgeOnStar2;
