@@ -1,4 +1,4 @@
-import OnStar from "aonstarjs";
+import OnStar from "onstarjs2";
 import CommandDelegator from "./CommandDelegator";
 import { isValidConfig } from "./ConfigValidation";
 import { OnStarJsMethod, OnStarAccessoryConfig } from "./types";
