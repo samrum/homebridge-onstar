@@ -119,7 +119,7 @@ var OnStarAccessoryConfigKey;
     OnStarAccessoryConfigKey["Username"] = "username";
     OnStarAccessoryConfigKey["Password"] = "password";
     OnStarAccessoryConfigKey["OnStarPin"] = "onStarPin";
-    OnStarAccessoryConfigKey["OnStarTOTP"] = "onStarTOTP";
+    OnStarAccessoryConfigKey["onStarTOTP"] = "totpKey";
     OnStarAccessoryConfigKey["Name"] = "name";
     OnStarAccessoryConfigKey["EnableAlert"] = "enableAlert";
     OnStarAccessoryConfigKey["EnableCharger"] = "enableCharger";
@@ -133,7 +133,7 @@ const REQUIRED_CONFIG_KEYS = [
     OnStarAccessoryConfigKey.Username,
     OnStarAccessoryConfigKey.Password,
     OnStarAccessoryConfigKey.OnStarPin,
-    OnStarAccessoryConfigKey.OnStarTOTP,
+    OnStarAccessoryConfigKey.onStarTOTP,
     OnStarAccessoryConfigKey.Name,
 ];
 function isValidConfig(config, log = () => { }) {
@@ -168,7 +168,7 @@ class OnStarAccessory {
             username: this.config.username,
             password: this.config.password,
             onStarPin: this.config.onStarPin,
-            onStarTOTP: this.config.onStarTOTP,
+            totpKey: this.config.onStarTOTP,
             checkRequestStatus: false,
         }), this.log, this.hapCharacteristic, this.config.doorsDefaultToUnlocked || false);
         const name = this.config.name;
