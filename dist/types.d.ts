@@ -5,7 +5,7 @@ export declare enum OnStarAccessoryConfigKey {
     Username = "username",
     Password = "password",
     OnStarPin = "onStarPin",
-    totpKEY = "onStarTOTP",
+    totpKey = "onStarTOTP",
     Name = "name",
     EnableAlert = "enableAlert",
     EnableCharger = "enableCharger",
