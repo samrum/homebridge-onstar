@@ -117,7 +117,7 @@ var OnStarAccessoryConfigKey;
     OnStarAccessoryConfigKey["Username"] = "username";
     OnStarAccessoryConfigKey["Password"] = "password";
     OnStarAccessoryConfigKey["OnStarPin"] = "onStarPin";
-    OnStarAccessoryConfigKey["totpKey"] = "onStarTOTP";
+    OnStarAccessoryConfigKey["onStarTOTP"] = "totpKey";
     OnStarAccessoryConfigKey["Name"] = "name";
     OnStarAccessoryConfigKey["EnableAlert"] = "enableAlert";
     OnStarAccessoryConfigKey["EnableCharger"] = "enableCharger";
