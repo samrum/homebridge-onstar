@@ -168,7 +168,7 @@ class OnStarAccessory {
             username: this.config.username,
             password: this.config.password,
             onStarPin: this.config.onStarPin,
-            totpKey: this.config.totpKey,
+            TotpKey: this.config.totpKey,
             checkRequestStatus: false,
         }), this.log, this.hapCharacteristic, this.config.doorsDefaultToUnlocked || false);
         const name = this.config.name;
