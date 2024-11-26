@@ -1,6 +1,6 @@
 # homebridge-onstar-dev (OnStar Accessory)
 
-[![npm version](https://badge.fury.io/js/homebridge-onstar2.svg)](https://badge.fury.io/js/homebridge-onstar2)
+[![npm version](https://badge.fury.io/js/homebridge-onstar-dev.svg)](https://badge.fury.io/js/homebridge-onstar-dev)
 
 Homebridge support for OnStar!
 
