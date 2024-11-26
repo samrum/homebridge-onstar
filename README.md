@@ -1,4 +1,4 @@
-# homebridge-onstar2 (OnStar Accessory)
+# homebridge-onstar-dev (OnStar Accessory)
 
 [![npm version](https://badge.fury.io/js/homebridge-onstar2.svg)](https://badge.fury.io/js/homebridge-onstar2)
 
