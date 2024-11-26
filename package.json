@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-onstar2",
-  "description": "Unofficial OnStar plugin for Homebridge",
-  "version": "1.9.3",
+  "name": "homebridge-onstar-dev",
+  "description": "Unofficial OnStar plugin for Homebridge, with update onstarjs2",
+  "version": "1.0.0",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -48,7 +48,7 @@
     "buick",
     "cadillac"
   ],
-  "author": "Ruben Medina <dev@rubenmedina.com> (https://rubenmedina.com)",
+  "author": "reartvapps",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/samrum/homebridge-onstar/issues"
