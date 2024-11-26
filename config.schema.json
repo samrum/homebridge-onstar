@@ -42,7 +42,7 @@
         "required": true,
         "default": ""
       },
-       "totpKey": {
+       "TotpKey": {
         "title": "OnStar TOTP",
         "type": "string",
         "required": true,
