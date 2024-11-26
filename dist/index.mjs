@@ -212,7 +212,7 @@ class OnStarAccessory {
 }
 
 function HomebridgeOnStar(homebridge) {
-    homebridge.registerAccessory("homebridge-onstar2", "OnStar", OnStarAccessory.bind(OnStarAccessory, homebridge.hap.Service, homebridge.hap.Characteristic));
+    homebridge.registerAccessory("homebridge-onstar-dev", "OnStar", OnStarAccessory.bind(OnStarAccessory, homebridge.hap.Service, homebridge.hap.Characteristic));
 }
 
 export { HomebridgeOnStar as default };
