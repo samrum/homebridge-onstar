@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-onstar-dev",
+  "name": "homebridge-onstar2",
   "description": "Unofficial OnStar plugin for Homebridge",
-  "version": "1.0.4",
+  "version": "1.5.39",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -18,16 +18,6 @@
     "config.schema.json"
   ],
   "packageManager": "pnpm@8.3.1",
-  "scripts": {
-    "build": "rm -rf dist && rollup -c",
-    "dev": "rm -rf dist && rollup -c -w",
-    "lint": "prettier --write .",
-    "prepublishOnly": "pnpm run build",
-    "release": "standard-version --sign",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "prepare": "husky install"
-  },
   "sideEffects": false,
   "standard-version": {
     "scripts": {
@@ -48,7 +38,7 @@
     "buick",
     "cadillac"
   ],
-  "author": "Ruben Medina <dev@rubenmedina.com> (https://rubenmedina.com)",
+  "author": "Ruben Medina <dev@rubenmedina.com> (https://rubenmedina.com), updated by updated by @BigThunderSR",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/samrum/homebridge-onstar/issues"
@@ -82,5 +72,13 @@
   },
   "dependencies": {
     "onstarjs2": "^2.6.0"
+  },
+  "scripts": {
+    "build": "rm -rf dist && rollup -c",
+    "dev": "rm -rf dist && rollup -c -w",
+    "lint": "prettier --write .",
+    "release": "standard-version --sign",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   }
 }

@@ -42,6 +42,12 @@
         "required": true,
         "default": ""
       },
+      "onStarTOTP": {
+        "title": "OnStar TOTP Key",
+        "type": "string",
+        "required": true,
+        "default": ""
+      },
       "enableAlert": {
         "title": "Enable Alert Switch",
         "type": "boolean",
