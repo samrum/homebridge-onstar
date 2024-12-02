@@ -86,7 +86,7 @@ Siri command: "Turn on the Car alert"
 
 - Toggling switches off is possible using Siri/Shortcuts/Scenes
 - When secret keys are rotated by MyChevrolet/OnStar, the plugin may stop working until the keys are updated.
-- homebridge-onstar2 will return success once requests are considered _In Progress_. As such, OnStar request failures after the initial request are made won't be handled.
+- homebridge-onstar-dev will return success once requests are considered _In Progress_. As such, OnStar request failures after the initial request are made won't be handled.
 
 # Credits
 
