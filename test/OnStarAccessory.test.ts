@@ -9,6 +9,7 @@ const TestAccessoryConfig: OnStarAccessoryConfig = {
   [OnStarAccessoryConfigKey.Username]: "foo@bar.com",
   [OnStarAccessoryConfigKey.Password]: "p@ssw0rd",
   [OnStarAccessoryConfigKey.OnStarPin]: "1234",
+  [OnStarAccessoryConfigKey.onStarTOTP]: "6dfakdsfwers",
   [OnStarAccessoryConfigKey.Name]: "Car",
 };
 
