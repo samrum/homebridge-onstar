@@ -1,7 +1,7 @@
 {
   "pluginAlias": "OnStar",
   "pluginType": "accessory",
-  "footerDisplay": "For additional info please check the [homebridge-onstar](https://github.com/reartvapps/homebridge-onstar-dev/) repo.",
+  "footerDisplay": "For additional info please check the [homebridge-onstar](https://github.com/samrum/homebridge-onstar/) repo.",
   "schema": {
     "type": "object",
     "properties": {
@@ -38,12 +38,6 @@
       },
       "onStarPin": {
         "title": "OnStar Pin",
-        "type": "string",
-        "required": true,
-        "default": ""
-      },
-       "onStarTOTP": {
-        "title": "OnStar TOTP Key",
         "type": "string",
         "required": true,
         "default": ""

@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-onstar-dev",
-  "description": "Unofficial OnStar plugin for Homebridge, with update onstarjs2",
-  "version": "1.0.3",
+  "name": "homebridge-onstar",
+  "description": "Unofficial OnStar plugin for Homebridge",
+  "version": "1.5.39",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -48,7 +48,7 @@
     "buick",
     "cadillac"
   ],
-  "author": "reartvapps",
+  "author": "Ruben Medina <dev@rubenmedina.com> (https://rubenmedina.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/samrum/homebridge-onstar/issues"
@@ -81,6 +81,6 @@
     "*.{js,css,md,json,yml}": "prettier --write"
   },
   "dependencies": {
-    "onstarjs2": "^2.6.0"
+    "onstarjs": "^2.5.3"
   }
 }
