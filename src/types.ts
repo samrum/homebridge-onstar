@@ -13,6 +13,7 @@ export enum OnStarAccessoryConfigKey {
   Username = "username",
   Password = "password",
   OnStarPin = "onStarPin",
+  onStarTOTP = "totpKey",
   Name = "name",
   EnableAlert = "enableAlert",
   EnableCharger = "enableCharger",
@@ -26,6 +27,7 @@ export type OnStarAccessoryConfig = {
   [OnStarAccessoryConfigKey.Username]: string;
   [OnStarAccessoryConfigKey.Password]: string;
   [OnStarAccessoryConfigKey.OnStarPin]: string;
+  [OnStarAccessoryConfigKey.onStarTOTP]: string;
   [OnStarAccessoryConfigKey.Name]: string;
   [OnStarAccessoryConfigKey.EnableAlert]?: boolean;
   [OnStarAccessoryConfigKey.EnableCharger]?: boolean;
