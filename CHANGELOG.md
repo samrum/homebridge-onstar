@@ -1,6 +1,11 @@
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+### [1.0.51] (2024-12-2)
+
+### Bug Fixes
+* update Readme
+* add homebridge accessory registration
 ### [1.0.5] (2024-12-1)
 
 ### Bug Fixes
