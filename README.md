@@ -1,14 +1,28 @@
-# homebridge-onstar (OnStar Accessory)
+# homebridge-onstar-dev (OnStar Accessory)
 
-[![npm version](https://badge.fury.io/js/homebridge-onstar.svg)](https://badge.fury.io/js/homebridge-onstar)
-[![build](https://github.com/samrum/homebridge-onstar/workflows/build/badge.svg)](https://github.com/samrum/homebridge-onstar/actions?query=workflow%3Abuild)
-[![Coverage Status](https://coveralls.io/repos/github/samrum/homebridge-onstar/badge.svg?branch=master)](https://coveralls.io/github/samrum/homebridge-onstar?branch=master)
-[![verified-by-homebridge](https://badgen.net/badge/homebridge/verified/purple)](https://github.com/homebridge/homebridge/wiki/Verified-Plugins)
+[![npm version](https://badge.fury.io/js/homebridge-onstar-dev.svg)](https://badge.fury.io/js/homebridge-onstar-dev)
 
 Homebridge support for OnStar!
 
 **Use at your own risk. This is an unofficial plugin.**
 
+# New Requirement as of 2024-11-19
+
+Updated to use TOTP to fulfill new authentication process from GM.
+
+You will need to change your OnStar account's MFA method to "Third-Party Authenticator App"
+
+The "Third-Party Authenticator App" option doesn't seem to show up on mobile, so please try from a desktop browser.
+
+You will need to capture your TOTP key from the "Third-Party Authenticator App" setup so that you can provide it in your .env or initialization config.
+
+You may be able to obtain your TOTP key by inspecting/hovering over the link under the QR code when you are setting it up.
+
+If you use an authenticator app such as Stratum, Bitwarden, or Vaultwarden that allows you to view your TOTP key, you can view it at any time.
+
+In the IOS Passwords app you can tap "Copy Setup URL" and obtain the secret from the copied data.
+
+If you cannot find the option to configure a "Third-Party Authenticator App" on your GM account page, try contacting OnStar to see if there is another way to enable it.
 # Configuration
 
 ## Basic Config (Climate)
@@ -23,6 +37,7 @@ Homebridge support for OnStar!
           "username": "foo@bar.com",
           "password": "p@ssw0rd",
           "onStarPin": "1234"
+          "onStarTOTP": "XXXXXXXXXXXXXX",
         }
       ]
     }
@@ -71,10 +86,12 @@ Siri command: "Turn on the Car alert"
 
 - Toggling switches off is possible using Siri/Shortcuts/Scenes
 - When secret keys are rotated by MyChevrolet/OnStar, the plugin may stop working until the keys are updated.
-- homebridge-onstar will return success once requests are considered _In Progress_. As such, OnStar request failures after the initial request are made won't be handled.
+- homebridge-onstar2 will return success once requests are considered _In Progress_. As such, OnStar request failures after the initial request are made won't be handled.
 
 # Credits
 
 [OnStarJS](https://github.com/samrum/OnStarJS) (Shoutout to [mikenemat](https://github.com/mikenemat/) and [gm-onstar-probe](https://github.com/mikenemat/gm-onstar-probe))
 
 [homebridge-tesla](https://github.com/nfarina/homebridge-tesla) for being a great reference to refer to on how to set up various homebridge services.
+
+Credits to [reartvapps](https://github.com/reartvapps) and [BigThunderSR](https://github.com/bigthundersr) for the updated homebridge-onstar version support.
