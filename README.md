@@ -94,4 +94,4 @@ Siri command: "Turn on the Car alert"
 
 [homebridge-tesla](https://github.com/nfarina/homebridge-tesla) for being a great reference to refer to on how to set up various homebridge services.
 
-Credits to Ashton Smith for the updated homebridge-onstar version support.
+Credits to [reartvapps](https://github.com/reartvapps) and [BigThunderSR](https://github.com/bigthundersr) for the updated homebridge-onstar version support.
