@@ -1,4 +1,4 @@
-import OnStar from "onstarjs";
+import OnStar from "onstarjs2";
 import CommandDelegator from "./CommandDelegator";
 import { isValidConfig } from "./ConfigValidation";
 import { OnStarJsMethod, OnStarAccessoryConfig } from "./types";
@@ -26,6 +26,7 @@ class OnStarAccessory {
         username: this.config.username,
         password: this.config.password,
         onStarPin: this.config.onStarPin,
+        onStarTOTP: this.config.onStarTOTP,
         checkRequestStatus: false,
       }),
       this.log,
