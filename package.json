@@ -1,11 +1,9 @@
 {
   "name": "homebridge-onstar-dev",
-  "description": "Unofficial OnStar plugin for Homebridge",
-  "version": "1.0.61",
-  "type": "module",
+  "version": "1.0.62",
+  "description": "Unofficial OnStar plugin for homebridge.",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -13,23 +11,45 @@
       "require": "./dist/index.cjs"
     }
   },
+  "type": "module",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "config.schema.json"
+    "dist"
   ],
-  "packageManager": "pnpm@8.3.1",
-  "sideEffects": false,
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "rm -rf dist && rollup -c",
+    "dev": "rm -rf dist && rollup -c -w",
+    "lint": "prettier --write .",
+    "prepublishOnly": "pnpm run build",
+    "release": "standard-version --sign",
+    "test": "pnpm test:unit && pnpm test:functional",
+    "test:unit": "jest test/unit",
+    "test:coverage": "jest test/unit --coverage",
+    "test:functional": "jest test/functional",
+    "test:keys": "jest test/functional -t 'Unupgraded Command Successful'",
+    "test:auth": "jest test/auth/testAuth",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,ts,md,yml}": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "pnpm@9.14.4",
   "standard-version": {
     "scripts": {
-      "prerelease": "pnpm test && pnpm build"
+      "prerelease": "pnpm test:unit && pnpm build"
     }
   },
+  "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reartvapps/homebridge-onstar-dev.git"
+    "url": "git+https://github.com/BigThunderSR/OnStarJS.git"
   },
   "keywords": [
-    "homebridge-plugin",
     "onstar",
     "chevrolet",
     "chevy",
@@ -38,47 +58,39 @@
     "buick",
     "cadillac"
   ],
-  "author": "Ruben Medina <dev@rubenmedina.com> (https://rubenmedina.com), updated by @BigThunderSR and @reartvapps",
+  "author": "Ruben Medina <dev@rubenmedina.com> (https://rubenmedina.com), updated by @BigThunderSR (https://github.com/BigThunderSR) and others.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/reartvapps/homebridge-onstar-dev/issues"
+    "url": "https://github.com/BigThunderSR/OnStarJS/issues"
   },
-  "engines": {
-    "node": ">=11.0.0",
-    "homebridge": ">=0.4.0"
-  },
-  "funding": {
-    "type": "paypal",
-    "url": "https://paypal.me/samrum"
-  },
-  "homepage": "https://github.com/reartvapps/homebridge-onstar-dev#readme",
-  "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.0",
-    "@types/jest": "^29.5.1",
-    "@types/node": "^18.16.1",
-    "husky": "^8.0.3",
-    "jest": "^29.5.0",
-    "lint-staged": "^13.2.1",
-    "prettier": "3.3.3",
-    "rollup": "^3.21.0",
-    "standard-version": "^9.5.0",
-    "ts-jest": "^29.1.0",
-    "ts-mockito": "^2.6.1",
-    "tslib": "^2.5.0",
-    "typescript": "^5.0.4"
-  },
-  "lint-staged": {
-    "*.{js,css,md,json,yml}": "prettier --write"
-  },
+  "homepage": "https://github.com/BigThunderSR/OnStarJS#readme",
   "dependencies": {
-    "onstarjs2": "^2.6.0"
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "axios": "^1.7.8",
+    "http-cookie-agent": "^6.0.6",
+    "jsonwebtoken": "^9.0.2",
+    "openid-client": "^5.7.1",
+    "totp-generator": "^1.0.0",
+    "tough-cookie": "^5.0.0",
+    "uuid": "^11.0.3"
   },
-  "scripts": {
-    "build": "rm -rf dist && rollup -c",
-    "dev": "rm -rf dist && rollup -c -w",
-    "lint": "prettier --write .",
-    "release": "standard-version --sign",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@types/jest": "^29.5.14",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/uuid": "^10.0.0",
+    "dotenv": "^16.4.7",
+    "husky": "9.1.7",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.4.1",
+    "rollup": "^4.28.0",
+    "standard-version": "^9.5.0",
+    "ts-jest": "^29.2.5",
+    "ts-mockito": "^2.6.1",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.2"
   }
 }
