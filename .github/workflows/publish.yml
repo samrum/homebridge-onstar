@@ -26,6 +26,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+        
+      - name: Login Info 
+        run: npm install npm login --token ${{ secrets.NODE_AUTH_TOKEN }}
 
       - name: Publish package
         run: pnpm publish --access public --no-git-checks
