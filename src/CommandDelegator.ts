@@ -1,5 +1,5 @@
-import OnStar from "onstarjs";
-import { Result } from "onstarjs/dist/types";
+import OnStar from "onstarjs2";
+import { Result } from "onstarjs2/dist/types";
 import { OnStarJsMethod } from "./types";
 import { pause } from "./utils";
 
