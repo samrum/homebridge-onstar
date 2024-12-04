@@ -1,6 +1,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+### [1.0.6] (2024-12-4)
+
+### Bug Fixes
+* create workflows for build
 ### [1.0.51] (2024-12-2)
 
 ### Bug Fixes
