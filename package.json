@@ -1,7 +1,7 @@
 {
   "name": "homebridge-onstar-dev",
   "description": "Unofficial OnStar plugin for Homebridge",
-  "version": "1.0.6",
+  "version": "1.0.61",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
