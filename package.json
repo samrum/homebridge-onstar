@@ -47,7 +47,7 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BigThunderSR/OnStarJS.git"
+    "url": "git+https://github.com/reartvapps/homebridge-onstar-dev.git"
   },
   "keywords": [
     "onstar",
@@ -58,12 +58,12 @@
     "buick",
     "cadillac"
   ],
-  "author": "Ruben Medina <dev@rubenmedina.com> (https://rubenmedina.com), updated by @BigThunderSR (https://github.com/BigThunderSR) and others.",
+  "author": "me",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BigThunderSR/OnStarJS/issues"
+    "url": "https://github.com/reartvapps/homebridge-onstar-dev/issues"
   },
-  "homepage": "https://github.com/BigThunderSR/OnStarJS#readme",
+  "homepage": "https://github.com/homebridge-onstar-dev/#readme",
   "dependencies": {
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
