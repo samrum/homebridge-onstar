@@ -1,5 +1,5 @@
 {
-  "name": "homebridge-onstar-dev",
+  "name": "homebridge-onstar-test",
   "description": "Unofficial OnStar plugin for Homebridge",
   "version": "1.0.0",
   "type": "module",
