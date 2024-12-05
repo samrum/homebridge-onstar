@@ -26,6 +26,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+      
+      - name: Install npm
+        run: npm run build
 
       - name: Publish package
         run: pnpm publish --access public --no-git-checks
