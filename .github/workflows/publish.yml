@@ -31,7 +31,7 @@ jobs:
         run: npm run build
 
       - name: Publish package
-        run: pnpm publish --access public https://github.com/reartvapps/homebridge-onstar-test.git
+        run: pnpm publish  https://github.com/reartvapps/homebridge-onstar-test.git --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
           NPM_CONFIG_PROVENANCE: true
