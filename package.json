@@ -67,7 +67,7 @@
     "*.{js,css,md,json,yml}": "prettier --write"
   },
   "dependencies": {
-    "onstarjs2": "^2.6.0"
+    "onstarjs2": "^2.6.1"
   },
   "scripts": {
     "build": "rm -rf dist && rollup -c",
