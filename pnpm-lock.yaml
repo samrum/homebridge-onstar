@@ -8,8 +8,8 @@ importers:
   .:
     dependencies:
       onstarjs2:
-        specifier: ^2.6.0
-        version: 2.6.0
+        specifier: ^2.6.1
+        version: 2.6.1
     devDependencies:
       "@rollup/plugin-typescript":
         specifier: ^11.1.0
@@ -2419,7 +2419,7 @@ packages:
       }
     engines: { node: ">=12" }
 
-  onstarjs@2.6.0:
+  onstarjs2@2.6.1:
     resolution:
       {
         integrity: sha512-hdz+n/tnb3zXE9MxWsDq4ATJDVfFfsnd1/Wl6n/+ilDmICZfr3CVmO9hg9Nrl+TEwCJiN3TkHmFc3ngWAjHjKw==,
@@ -5062,7 +5062,7 @@ snapshots:
     dependencies:
       mimic-fn: 4.0.0
 
-  onstarjs@2.6.0:
+  onstarjs2@2.6.1:
     dependencies:
       axios: 1.6.1
       jsonwebtoken: 9.0.0
