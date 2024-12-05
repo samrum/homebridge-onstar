@@ -69,6 +69,9 @@
   "dependencies": {
     "onstarjs2": "^2.6.1"
   },
+  "publishConfig": {
+  "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "rm -rf dist && rollup -c",
     "dev": "rm -rf dist && rollup -c -w",
