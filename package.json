@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-onstar-test",
+  "name": "homebridge-onstar-dev",
   "description": "Unofficial OnStar plugin for Homebridge",
-  "version": "1.0.7",
+  "version": "1.0.0",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reartvapps/homebridge-onstar-test.git"
+    "url": "git+https://github.com/reartvapps/homebridge-onstar-dev.git"
   },
   "keywords": [
     "homebridge-plugin",
@@ -38,16 +38,16 @@
     "buick",
     "cadillac"
   ],
-  "author": "Ruben Medina <dev@rubenmedina.com> (https://rubenmedina.com), updated by @BigThunderSR and @reartvapps",
+  "author": "Ruben Medina <dev@rubenmedina.com> (https://rubenmedina.com), updated by @reartvapps",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/reartvapps/homebridge-onstar-test/issues"
+    "url": "https://github.com/reartvapps/homebridge-onstar-dev/issues"
   },
   "engines": {
     "node": ">=11.0.0",
     "homebridge": ">=0.4.0"
   },
-  "homepage": "https://github.com/reartvapps/homebridge-onstar-test#readme",
+  "homepage": "https://github.com/reartvapps/homebridge-onstar-dev#readme",
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.0",
     "@types/jest": "^29.5.1",
