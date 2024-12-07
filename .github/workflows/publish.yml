@@ -2,7 +2,7 @@ name: Publish Package
 
 on:
   schedule:
-    - cron: "30 12 * * *" 
+    - cron: "02 7 * * *" 
   push:
     tags:
       - "v*"
