@@ -1,8 +1,6 @@
 name: Publish Package
 
 on:
-  schedule:
-    - cron: "17 12 * * *" 
   push:
     tags:
       - "v*"
