@@ -37,8 +37,8 @@ _If you cannot find the option to configure a "Third-Party Authenticator App" on
           "vin": "1G2ZF58B774109863",
           "username": "foo@bar.com",
           "password": "p@ssw0rd",
-          "onStarPin": "1234"
-          "onStarTOTP": "XXXXXXXXXXXXXX",
+          "onStarPin": "1234",
+          "onStarTOTP": "XXXXXXXXXXXXXX"
         }
       ]
     }
@@ -88,6 +88,7 @@ Siri command: "Turn on the Car alert"
 - Toggling switches off is possible using Siri/Shortcuts/Scenes
 - When secret keys are rotated by MyChevrolet/OnStar, the plugin may stop working until the keys are updated.
 - homebridge-onstar-dev will return success once requests are considered _In Progress_. As such, OnStar request failures after the initial request are made won't be handled.
+- 403 Forbidden Errors may occur, this happens with issues on processing with the API on OnStar's end, try the plugin again later.
 
 # Credits
 
