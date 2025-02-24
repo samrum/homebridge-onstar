@@ -1,3 +1,7 @@
+# Archived
+
+**This plugin has been archived and is no longer maintained.**
+
 # homebridge-onstar (OnStar Accessory)
 
 [![npm version](https://badge.fury.io/js/homebridge-onstar.svg)](https://badge.fury.io/js/homebridge-onstar)
